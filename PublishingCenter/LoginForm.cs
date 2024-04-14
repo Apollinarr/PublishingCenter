@@ -88,6 +88,13 @@ namespace PublishingCenter
             startForm.ShowRegForm();
         }
 
+        private void labelForgotPassword_Click(object sender, EventArgs e)
+        {
+            Hide();
+            StartForm startForm = (StartForm)Application.OpenForms["StartForm"];
+            startForm.ShowForgotPasswordForm();
+        }
+
         public static bool VerifyHashedPassword(string hashedPassword, string password)
         {
             byte[] buffer4;

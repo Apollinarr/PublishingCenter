@@ -2,6 +2,7 @@
 using ServiceStack.DataAnnotations;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,8 @@ namespace PublishingCenter
         {
             connection = new Connection().GetConnectionString();
 
-            connection.Open();
+            if (connection.State == ConnectionState.Closed)
+                connection.Open();
 
             string query = "SELECT * FROM employees WHERE login = @login";
             using (MySqlCommand cmd = new MySqlCommand(query, connection))
