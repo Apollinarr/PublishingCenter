@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace PublishingCenter
 {
@@ -26,30 +27,67 @@ namespace PublishingCenter
             try
             {
                 connection.Open();
-                string query = "INSERT INTO employees (first_name, last_name, middle_name, position_id, login, password)" +
+                if (textBoxFirstName.Text.Length == 0)
+                {
+                    MessageBox.Show("Неверно введено имя.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    connection.Close();
+                    textBoxFirstName.Focus();
+                    return;
+                }
+                else if (textBoxLastName.Text.Length == 0)
+                {
+                    MessageBox.Show("Неверно введена фамилия.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    connection.Close();
+                    textBoxLastName.Focus();
+                    return;
+                }
+                else if (comboBoxPosition.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Выберите должность.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    connection.Close();
+                    comboBoxPosition.Focus();
+                    return;
+                }
+                else if (!CheckLogin())
+                {
+                    return;
+                }          
+                else if (textBoxPassword.Text.Length < 5 && textBoxPassword.Text != textBoxConfirmePassword.Text)
+                {
+                    MessageBox.Show("Неверно введен пароль. Пароль должен быть не короче 5 символов.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    connection.Close();
+                    textBoxPassword.Focus();
+                    return;
+                }
+                else
+                {
+                    string query = "INSERT INTO employees (first_name, last_name, middle_name, position_id, login, password)" +
                         " VALUES (@first_name, @last_name, @middle_name, @position, @login, @password)";
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@first_name", textBoxFirstName.Text);
-                cmd.Parameters.AddWithValue("@middle_name", textBoxMiddleName.Text);
-                cmd.Parameters.AddWithValue("@last_name", textBoxLastName.Text);
-                cmd.Parameters.AddWithValue("@position", comboBoxPosition.SelectedIndex + 1);
-                cmd.Parameters.AddWithValue("@login", textBoxLogin.Text);
-                cmd.Parameters.AddWithValue("@password", HashPassword(textBoxPassword.Text));
-                cmd.ExecuteNonQuery();
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@first_name", textBoxFirstName.Text);
+                    cmd.Parameters.AddWithValue("@middle_name", textBoxMiddleName.Text);
+                    cmd.Parameters.AddWithValue("@last_name", textBoxLastName.Text);
+                    cmd.Parameters.AddWithValue("@position", comboBoxPosition.SelectedIndex + 1);
+                    cmd.Parameters.AddWithValue("@login", textBoxLogin.Text);
+                    cmd.Parameters.AddWithValue("@password", HashPassword(textBoxPassword.Text));
+                    cmd.ExecuteNonQuery();
 
-                connection.Close();
+                    connection.Close();
 
-                MessageBox.Show("Аккаунт успешно зарегистрирован.", "Регистрация",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Аккаунт успешно зарегистрирован.", "Регистрация",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                Hide();
-                StartForm startForm = (StartForm)Application.OpenForms["StartForm"];
-                startForm.ShowLoginForm();
+                    Mailer.SendMessage(textBoxLogin.Text, "Регистрация", $"{textBoxFirstName.Text} {textBoxLastName.Text}, ваш аккаунт успешно зарегистрирован.");
+
+                    Hide();
+                    StartForm startForm = (StartForm)Application.OpenForms["StartForm"];
+                    startForm.ShowLoginForm();
+                } 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show(ex.Message);
+                connection.Close();
             }
         }
 
@@ -96,6 +134,73 @@ namespace PublishingCenter
                 textBoxPassword.PasswordChar = '•';
                 textBoxConfirmePassword.PasswordChar = '•';
             }
+        }
+
+        private void textBoxLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxMiddleName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 33 || e.KeyChar > 126) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxConfirmePassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 33 || e.KeyChar > 126) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private bool CheckLogin()
+        {
+            string pattern = @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$";
+
+            if (!Regex.IsMatch(textBoxLogin.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                MessageBox.Show("Неверно введен логин. Введите адрес электронной почты.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
+                return false;
+            }
+
+            string checkQuery = "SELECT COUNT(*) FROM employees WHERE login = @login";
+            MySqlCommand checkCmd = new MySqlCommand(checkQuery, connection);
+            checkCmd.Parameters.AddWithValue("@login", textBoxLogin.Text);
+            int userCount = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+            if (userCount > 0)
+            {
+                MessageBox.Show("Пользователь с таким логином уже существует.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
+                return false;
+            }
+
+            return true;
         }
     }
 }
