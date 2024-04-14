@@ -71,6 +71,7 @@
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(180, 28);
             this.textBoxFirstName.TabIndex = 1;
+            this.textBoxFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFirstName_KeyPress);
             // 
             // labelMiddleName
             // 
@@ -94,6 +95,7 @@
             this.textBoxMiddleName.Name = "textBoxMiddleName";
             this.textBoxMiddleName.Size = new System.Drawing.Size(180, 28);
             this.textBoxMiddleName.TabIndex = 2;
+            this.textBoxMiddleName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMiddleName_KeyPress);
             // 
             // labelLastName
             // 
@@ -117,6 +119,7 @@
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(180, 28);
             this.textBoxLastName.TabIndex = 0;
+            this.textBoxLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLastName_KeyPress);
             // 
             // label1
             // 
@@ -183,6 +186,7 @@
             this.textBoxPassword.PasswordChar = '•';
             this.textBoxPassword.Size = new System.Drawing.Size(180, 28);
             this.textBoxPassword.TabIndex = 5;
+            this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPassword_KeyPress);
             // 
             // labelLogin
             // 
@@ -204,7 +208,7 @@
             this.textBoxLogin.MaxLength = 50;
             this.textBoxLogin.Multiline = true;
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(180, 28);
+            this.textBoxLogin.Size = new System.Drawing.Size(383, 28);
             this.textBoxLogin.TabIndex = 4;
             // 
             // textBoxConfirmePassword
@@ -219,6 +223,7 @@
             this.textBoxConfirmePassword.PasswordChar = '•';
             this.textBoxConfirmePassword.Size = new System.Drawing.Size(180, 28);
             this.textBoxConfirmePassword.TabIndex = 6;
+            this.textBoxConfirmePassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxConfirmePassword_KeyPress);
             // 
             // labelConfirmPassword
             // 
@@ -252,7 +257,7 @@
             this.labelBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelBack.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelBack.ForeColor = System.Drawing.Color.MediumPurple;
-            this.labelBack.Location = new System.Drawing.Point(195, 425);
+            this.labelBack.Location = new System.Drawing.Point(195, 416);
             this.labelBack.Name = "labelBack";
             this.labelBack.Size = new System.Drawing.Size(62, 19);
             this.labelBack.TabIndex = 28;

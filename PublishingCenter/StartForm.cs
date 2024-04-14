@@ -24,12 +24,6 @@ namespace PublishingCenter
 
         private void panelEmployee_Click(object sender, EventArgs e)
         {
-            //LoginForm loginForm = new LoginForm();
-            //loginForm.TopLevel = false;
-            //loginForm.Dock = DockStyle.Fill;
-            //panelScndLogin.Controls.Add(loginForm);
-            //loginForm.BringToFront();
-            //loginForm.Show();
             ShowLoginForm();
         }
 
@@ -51,6 +45,16 @@ namespace PublishingCenter
             panelScndLogin.Controls.Add(loginForm);
             loginForm.BringToFront();
             loginForm.Show();
+        }
+
+        public void ShowForgotPasswordForm()
+        {
+            ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
+            forgotPasswordForm.TopLevel = false;
+            forgotPasswordForm.Dock = DockStyle.Fill;
+            panelScndLogin.Controls.Add(forgotPasswordForm);
+            forgotPasswordForm.BringToFront();
+            forgotPasswordForm.Show();
         }
     }
 }

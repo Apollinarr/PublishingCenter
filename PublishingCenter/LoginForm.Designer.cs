@@ -128,6 +128,7 @@
             this.labelForgotPassword.Size = new System.Drawing.Size(148, 19);
             this.labelForgotPassword.TabIndex = 2;
             this.labelForgotPassword.Text = "Забыли пароль?";
+            this.labelForgotPassword.Click += new System.EventHandler(this.labelForgotPassword_Click);
             // 
             // labelDontHaveAcc
             // 
