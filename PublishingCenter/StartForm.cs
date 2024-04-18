@@ -56,5 +56,15 @@ namespace PublishingCenter
             forgotPasswordForm.BringToFront();
             forgotPasswordForm.Show();
         }
+
+        private void panelGuest_Click(object sender, EventArgs e)
+        {
+            Employee employee = new Employee();
+            employee.SetGuest();
+            Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.ShowDialog();
+            Show();
+        }
     }
 }
