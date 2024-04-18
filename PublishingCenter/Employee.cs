@@ -52,5 +52,15 @@ namespace PublishingCenter
                 return false;
             }
         }
+
+        public void SetGuest()
+        {
+            ID = -1;
+            FirstName = "";
+            LastName = "";
+            MiddleName = "";
+            Position = 4;
+            Login = "";
+        }
     }
 }

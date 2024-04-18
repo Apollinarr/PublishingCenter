@@ -36,22 +36,22 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelLogin = new System.Windows.Forms.Panel();
             this.panelScndLogin = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelEmployee = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelLogin = new System.Windows.Forms.Label();
+            this.panelGuest = new System.Windows.Forms.Panel();
+            this.pictureBoxGuest = new System.Windows.Forms.PictureBox();
+            this.labelGuest = new System.Windows.Forms.Label();
             this.panelName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelLogin.SuspendLayout();
             this.panelScndLogin.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelGuest.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuest)).BeginInit();
             this.SuspendLayout();
             // 
             // panelName
@@ -122,42 +122,12 @@
             // 
             // panelScndLogin
             // 
-            this.panelScndLogin.Controls.Add(this.panel2);
+            this.panelScndLogin.Controls.Add(this.panelGuest);
             this.panelScndLogin.Controls.Add(this.panelEmployee);
             this.panelScndLogin.Location = new System.Drawing.Point(0, 77);
             this.panelScndLogin.Name = "panelScndLogin";
             this.panelScndLogin.Size = new System.Drawing.Size(450, 453);
             this.panelScndLogin.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(252, 102);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(165, 157);
-            this.panel2.TabIndex = 3;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(28, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(122, 120);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label2.Location = new System.Drawing.Point(51, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 34);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Гость";
             // 
             // panelEmployee
             // 
@@ -217,6 +187,39 @@
             this.labelLogin.TabIndex = 1;
             this.labelLogin.Text = "Вход\r\n";
             // 
+            // panelGuest
+            // 
+            this.panelGuest.Controls.Add(this.pictureBoxGuest);
+            this.panelGuest.Controls.Add(this.labelGuest);
+            this.panelGuest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelGuest.Location = new System.Drawing.Point(253, 102);
+            this.panelGuest.Name = "panelGuest";
+            this.panelGuest.Size = new System.Drawing.Size(165, 162);
+            this.panelGuest.TabIndex = 3;
+            this.panelGuest.Click += new System.EventHandler(this.panelGuest_Click);
+            // 
+            // pictureBoxGuest
+            // 
+            this.pictureBoxGuest.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGuest.Image")));
+            this.pictureBoxGuest.Location = new System.Drawing.Point(14, 3);
+            this.pictureBoxGuest.Name = "pictureBoxGuest";
+            this.pictureBoxGuest.Size = new System.Drawing.Size(122, 117);
+            this.pictureBoxGuest.TabIndex = 0;
+            this.pictureBoxGuest.TabStop = false;
+            this.pictureBoxGuest.Click += new System.EventHandler(this.panelGuest_Click);
+            // 
+            // labelGuest
+            // 
+            this.labelGuest.AutoSize = true;
+            this.labelGuest.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGuest.ForeColor = System.Drawing.Color.MediumPurple;
+            this.labelGuest.Location = new System.Drawing.Point(35, 123);
+            this.labelGuest.Name = "labelGuest";
+            this.labelGuest.Size = new System.Drawing.Size(93, 34);
+            this.labelGuest.TabIndex = 1;
+            this.labelGuest.Text = "Гость";
+            this.labelGuest.Click += new System.EventHandler(this.panelGuest_Click);
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -226,6 +229,7 @@
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.panelName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -235,12 +239,12 @@
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             this.panelScndLogin.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelEmployee.ResumeLayout(false);
             this.panelEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelGuest.ResumeLayout(false);
+            this.panelGuest.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuest)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,10 +262,10 @@
         private System.Windows.Forms.Panel panelEmployee;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelScndLogin;
+        private System.Windows.Forms.Panel panelGuest;
+        private System.Windows.Forms.PictureBox pictureBoxGuest;
+        private System.Windows.Forms.Label labelGuest;
     }
 }
 
