@@ -52,7 +52,9 @@ namespace PublishingCenter
                         {
                             //MessageBox.Show("Пользователь авторизирован.", "Авторизация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Hide();
-                            //new MainForm().ShowDialog();
+                            new MainForm().ShowDialog();
+                            StartForm startForm = (StartForm)Application.OpenForms["StartForm"];
+                            startForm.Show();
                         }
                     }
                     else

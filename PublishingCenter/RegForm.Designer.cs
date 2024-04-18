@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegForm));
             this.labelFirstName = new System.Windows.Forms.Label();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.labelMiddleName = new System.Windows.Forms.Label();
@@ -314,6 +315,7 @@
             this.Controls.Add(this.labelLastName);
             this.Controls.Add(this.textBoxLastName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegForm";
             this.Text = "RegForm";
             this.ResumeLayout(false);

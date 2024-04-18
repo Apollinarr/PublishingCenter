@@ -1,0 +1,388 @@
+﻿namespace PublishingCenter
+{
+    partial class MainForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelUser = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelUser = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonUser = new System.Windows.Forms.Button();
+            this.panelChangeAccount = new System.Windows.Forms.Panel();
+            this.buttonChangeAccount = new System.Windows.Forms.Button();
+            this.panelExit = new System.Windows.Forms.Panel();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.labelLogo = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.panelSections = new System.Windows.Forms.Panel();
+            this.buttonSettings = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonReports = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonOrders = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonEditions = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonAuthors = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonBooks = new Guna.UI2.WinForms.Guna2Button();
+            this.panelContainer = new System.Windows.Forms.Panel();
+            this.timerAccountMenu = new System.Windows.Forms.Timer(this.components);
+            this.panelHeader.SuspendLayout();
+            this.flowLayoutPanelUser.SuspendLayout();
+            this.panelUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelChangeAccount.SuspendLayout();
+            this.panelExit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.panelSections.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.BackColor = System.Drawing.Color.MediumPurple;
+            this.panelHeader.Controls.Add(this.labelLogo);
+            this.panelHeader.Controls.Add(this.pictureBoxLogo);
+            this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(616, 58);
+            this.panelHeader.TabIndex = 0;
+            // 
+            // flowLayoutPanelUser
+            // 
+            this.flowLayoutPanelUser.Controls.Add(this.panelUser);
+            this.flowLayoutPanelUser.Controls.Add(this.panelChangeAccount);
+            this.flowLayoutPanelUser.Controls.Add(this.panelExit);
+            this.flowLayoutPanelUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flowLayoutPanelUser.Location = new System.Drawing.Point(702, 0);
+            this.flowLayoutPanelUser.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanelUser.Name = "flowLayoutPanelUser";
+            this.flowLayoutPanelUser.Size = new System.Drawing.Size(309, 58);
+            this.flowLayoutPanelUser.TabIndex = 1;
+            // 
+            // panelUser
+            // 
+            this.panelUser.Controls.Add(this.pictureBox1);
+            this.panelUser.Controls.Add(this.buttonUser);
+            this.panelUser.Location = new System.Drawing.Point(0, 0);
+            this.panelUser.Margin = new System.Windows.Forms.Padding(0);
+            this.panelUser.Name = "panelUser";
+            this.panelUser.Size = new System.Drawing.Size(309, 58);
+            this.panelUser.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.MediumPurple;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(254, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.buttonUser_Click);
+            // 
+            // buttonUser
+            // 
+            this.buttonUser.BackColor = System.Drawing.Color.MediumPurple;
+            this.buttonUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonUser.ForeColor = System.Drawing.Color.White;
+            this.buttonUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonUser.Location = new System.Drawing.Point(-31, -38);
+            this.buttonUser.Name = "buttonUser";
+            this.buttonUser.Size = new System.Drawing.Size(290, 133);
+            this.buttonUser.TabIndex = 1;
+            this.buttonUser.Text = "name";
+            this.buttonUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonUser.UseVisualStyleBackColor = false;
+            this.buttonUser.Click += new System.EventHandler(this.buttonUser_Click);
+            // 
+            // panelChangeAccount
+            // 
+            this.panelChangeAccount.Controls.Add(this.buttonChangeAccount);
+            this.panelChangeAccount.Location = new System.Drawing.Point(0, 58);
+            this.panelChangeAccount.Margin = new System.Windows.Forms.Padding(0);
+            this.panelChangeAccount.Name = "panelChangeAccount";
+            this.panelChangeAccount.Size = new System.Drawing.Size(309, 29);
+            this.panelChangeAccount.TabIndex = 0;
+            this.panelChangeAccount.Click += new System.EventHandler(this.buttonChangeAccount_Click);
+            // 
+            // buttonChangeAccount
+            // 
+            this.buttonChangeAccount.BackColor = System.Drawing.Color.White;
+            this.buttonChangeAccount.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonChangeAccount.ForeColor = System.Drawing.Color.MediumPurple;
+            this.buttonChangeAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonChangeAccount.Location = new System.Drawing.Point(-31, -51);
+            this.buttonChangeAccount.Name = "buttonChangeAccount";
+            this.buttonChangeAccount.Size = new System.Drawing.Size(389, 133);
+            this.buttonChangeAccount.TabIndex = 1;
+            this.buttonChangeAccount.Text = "Сменить аккаунт";
+            this.buttonChangeAccount.UseVisualStyleBackColor = false;
+            this.buttonChangeAccount.Click += new System.EventHandler(this.buttonChangeAccount_Click);
+            // 
+            // panelExit
+            // 
+            this.panelExit.Controls.Add(this.buttonExit);
+            this.panelExit.Location = new System.Drawing.Point(0, 87);
+            this.panelExit.Margin = new System.Windows.Forms.Padding(0);
+            this.panelExit.Name = "panelExit";
+            this.panelExit.Size = new System.Drawing.Size(309, 29);
+            this.panelExit.TabIndex = 0;
+            this.panelExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.White;
+            this.buttonExit.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExit.ForeColor = System.Drawing.Color.MediumPurple;
+            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonExit.Location = new System.Drawing.Point(-31, -51);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(389, 133);
+            this.buttonExit.TabIndex = 1;
+            this.buttonExit.Text = "Выход";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // labelLogo
+            // 
+            this.labelLogo.AutoSize = true;
+            this.labelLogo.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLogo.ForeColor = System.Drawing.Color.White;
+            this.labelLogo.Location = new System.Drawing.Point(75, 12);
+            this.labelLogo.Name = "labelLogo";
+            this.labelLogo.Size = new System.Drawing.Size(289, 34);
+            this.labelLogo.TabIndex = 2;
+            this.labelLogo.Text = "BookWise Publishing";
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 5);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(55, 50);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
+            // 
+            // panelSections
+            // 
+            this.panelSections.BackColor = System.Drawing.Color.White;
+            this.panelSections.Controls.Add(this.buttonSettings);
+            this.panelSections.Controls.Add(this.buttonReports);
+            this.panelSections.Controls.Add(this.buttonOrders);
+            this.panelSections.Controls.Add(this.buttonEditions);
+            this.panelSections.Controls.Add(this.buttonAuthors);
+            this.panelSections.Controls.Add(this.buttonBooks);
+            this.panelSections.Location = new System.Drawing.Point(0, 58);
+            this.panelSections.Name = "panelSections";
+            this.panelSections.Size = new System.Drawing.Size(1020, 59);
+            this.panelSections.TabIndex = 1;
+            // 
+            // buttonSettings
+            // 
+            this.buttonSettings.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.buttonSettings.CheckedState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonSettings.CustomBorderColor = System.Drawing.Color.White;
+            this.buttonSettings.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.buttonSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonSettings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonSettings.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonSettings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonSettings.FillColor = System.Drawing.Color.White;
+            this.buttonSettings.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSettings.ForeColor = System.Drawing.Color.MediumPurple;
+            this.buttonSettings.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonSettings.Location = new System.Drawing.Point(850, 0);
+            this.buttonSettings.Name = "buttonSettings";
+            this.buttonSettings.Size = new System.Drawing.Size(170, 59);
+            this.buttonSettings.TabIndex = 0;
+            this.buttonSettings.Text = "Настройки";
+            // 
+            // buttonReports
+            // 
+            this.buttonReports.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.buttonReports.CheckedState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonReports.CustomBorderColor = System.Drawing.Color.White;
+            this.buttonReports.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.buttonReports.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonReports.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonReports.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonReports.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonReports.FillColor = System.Drawing.Color.White;
+            this.buttonReports.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonReports.ForeColor = System.Drawing.Color.MediumPurple;
+            this.buttonReports.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonReports.Location = new System.Drawing.Point(680, 0);
+            this.buttonReports.Name = "buttonReports";
+            this.buttonReports.Size = new System.Drawing.Size(170, 59);
+            this.buttonReports.TabIndex = 0;
+            this.buttonReports.Text = "Отчеты";
+            // 
+            // buttonOrders
+            // 
+            this.buttonOrders.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.buttonOrders.CheckedState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonOrders.CustomBorderColor = System.Drawing.Color.White;
+            this.buttonOrders.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.buttonOrders.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonOrders.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonOrders.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonOrders.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonOrders.FillColor = System.Drawing.Color.White;
+            this.buttonOrders.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonOrders.ForeColor = System.Drawing.Color.MediumPurple;
+            this.buttonOrders.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonOrders.Location = new System.Drawing.Point(510, 0);
+            this.buttonOrders.Name = "buttonOrders";
+            this.buttonOrders.Size = new System.Drawing.Size(170, 59);
+            this.buttonOrders.TabIndex = 0;
+            this.buttonOrders.Text = "Заказы";
+            // 
+            // buttonEditions
+            // 
+            this.buttonEditions.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.buttonEditions.CheckedState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonEditions.CustomBorderColor = System.Drawing.Color.White;
+            this.buttonEditions.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.buttonEditions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonEditions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonEditions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonEditions.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonEditions.FillColor = System.Drawing.Color.White;
+            this.buttonEditions.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEditions.ForeColor = System.Drawing.Color.MediumPurple;
+            this.buttonEditions.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonEditions.Location = new System.Drawing.Point(340, 0);
+            this.buttonEditions.Name = "buttonEditions";
+            this.buttonEditions.Size = new System.Drawing.Size(170, 59);
+            this.buttonEditions.TabIndex = 0;
+            this.buttonEditions.Text = "Тиражи";
+            // 
+            // buttonAuthors
+            // 
+            this.buttonAuthors.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.buttonAuthors.CheckedState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonAuthors.CustomBorderColor = System.Drawing.Color.White;
+            this.buttonAuthors.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.buttonAuthors.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonAuthors.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonAuthors.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonAuthors.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonAuthors.FillColor = System.Drawing.Color.White;
+            this.buttonAuthors.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAuthors.ForeColor = System.Drawing.Color.MediumPurple;
+            this.buttonAuthors.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonAuthors.Location = new System.Drawing.Point(170, 0);
+            this.buttonAuthors.Name = "buttonAuthors";
+            this.buttonAuthors.Size = new System.Drawing.Size(170, 59);
+            this.buttonAuthors.TabIndex = 0;
+            this.buttonAuthors.Text = "Авторы";
+            // 
+            // buttonBooks
+            // 
+            this.buttonBooks.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.buttonBooks.CheckedState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonBooks.CustomBorderColor = System.Drawing.Color.White;
+            this.buttonBooks.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.buttonBooks.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonBooks.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonBooks.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonBooks.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonBooks.FillColor = System.Drawing.Color.White;
+            this.buttonBooks.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBooks.ForeColor = System.Drawing.Color.MediumPurple;
+            this.buttonBooks.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonBooks.Location = new System.Drawing.Point(0, 0);
+            this.buttonBooks.Name = "buttonBooks";
+            this.buttonBooks.Size = new System.Drawing.Size(170, 59);
+            this.buttonBooks.TabIndex = 0;
+            this.buttonBooks.Text = "Книги";
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelContainer.Location = new System.Drawing.Point(0, 113);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1020, 487);
+            this.panelContainer.TabIndex = 2;
+            // 
+            // timerAccountMenu
+            // 
+            this.timerAccountMenu.Interval = 10;
+            this.timerAccountMenu.Tick += new System.EventHandler(this.timerAccountMenu_Tick);
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1020, 600);
+            this.Controls.Add(this.flowLayoutPanelUser);
+            this.Controls.Add(this.panelContainer);
+            this.Controls.Add(this.panelSections);
+            this.Controls.Add(this.panelHeader);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MainForm";
+            this.panelHeader.ResumeLayout(false);
+            this.panelHeader.PerformLayout();
+            this.flowLayoutPanelUser.ResumeLayout(false);
+            this.panelUser.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelChangeAccount.ResumeLayout(false);
+            this.panelExit.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.panelSections.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.Panel panelSections;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.Label labelLogo;
+        private System.Windows.Forms.Panel panelContainer;
+        private Guna.UI2.WinForms.Guna2Button buttonBooks;
+        private Guna.UI2.WinForms.Guna2Button buttonAuthors;
+        private Guna.UI2.WinForms.Guna2Button buttonSettings;
+        private Guna.UI2.WinForms.Guna2Button buttonReports;
+        private Guna.UI2.WinForms.Guna2Button buttonOrders;
+        private Guna.UI2.WinForms.Guna2Button buttonEditions;
+        private System.Windows.Forms.Panel panelUser;
+        private System.Windows.Forms.Button buttonUser;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelChangeAccount;
+        private System.Windows.Forms.Button buttonChangeAccount;
+        private System.Windows.Forms.Panel panelExit;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelUser;
+        private System.Windows.Forms.Timer timerAccountMenu;
+    }
+}
