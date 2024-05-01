@@ -20,14 +20,15 @@ namespace PublishingCenter
             panelHeader.Width = MaximizedBounds.Width;
             panelSections.Width = MaximizedBounds.Width;
             flowLayoutPanelUser.Location = new Point(Width - flowLayoutPanelUser.Width - 10, 0);
-            if (Employee.Position != 4)
-            {
-                buttonUser.Text = Employee.FirstName + " " + Employee.LastName;
-            }
-            else
-            {
-                buttonUser.Text = "Гость";
-            }
+            buttonUser.Text = Employee.FirstName + " " + Employee.LastName;
+            //if (Employee.Position != 4)
+            //{
+            //    buttonUser.Text = Employee.FirstName + " " + Employee.LastName;
+            //}
+            //else
+            //{
+            //    buttonUser.Text = "Гость";
+            //}
         }
 
         bool menuExpand = false;
@@ -67,6 +68,8 @@ namespace PublishingCenter
         private void buttonChangeAccount_Click(object sender, EventArgs e)
         {
             Close();
+            StartForm startForm = (StartForm)Application.OpenForms["StartForm"];
+            startForm.ShowLoginForm();
             //ActiveForm.Show();
             //StartForm startForm = new StartForm();
             //startForm.Show();

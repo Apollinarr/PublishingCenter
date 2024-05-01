@@ -225,7 +225,7 @@
             this.Controls.Add(this.textBoxMail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ForgotPasswordForm";
-            this.Text = "ForgotPasswordForm";
+            this.Text = "ForgotPassword";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCode)).EndInit();
             this.ResumeLayout(false);

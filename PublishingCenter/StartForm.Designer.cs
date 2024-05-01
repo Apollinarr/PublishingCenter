@@ -36,22 +36,22 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelLogin = new System.Windows.Forms.Panel();
             this.panelScndLogin = new System.Windows.Forms.Panel();
+            this.panelGuest = new System.Windows.Forms.Panel();
+            this.pictureBoxGuest = new System.Windows.Forms.PictureBox();
+            this.labelGuest = new System.Windows.Forms.Label();
             this.panelEmployee = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelLogin = new System.Windows.Forms.Label();
-            this.panelGuest = new System.Windows.Forms.Panel();
-            this.pictureBoxGuest = new System.Windows.Forms.PictureBox();
-            this.labelGuest = new System.Windows.Forms.Label();
             this.panelName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelLogin.SuspendLayout();
             this.panelScndLogin.SuspendLayout();
-            this.panelEmployee.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelGuest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuest)).BeginInit();
+            this.panelEmployee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelName
@@ -129,6 +129,40 @@
             this.panelScndLogin.Size = new System.Drawing.Size(450, 453);
             this.panelScndLogin.TabIndex = 2;
             // 
+            // panelGuest
+            // 
+            this.panelGuest.Controls.Add(this.pictureBoxGuest);
+            this.panelGuest.Controls.Add(this.labelGuest);
+            this.panelGuest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelGuest.Location = new System.Drawing.Point(253, 102);
+            this.panelGuest.Name = "panelGuest";
+            this.panelGuest.Size = new System.Drawing.Size(165, 162);
+            this.panelGuest.TabIndex = 3;
+            this.panelGuest.Visible = false;
+            this.panelGuest.Click += new System.EventHandler(this.panelGuest_Click);
+            // 
+            // pictureBoxGuest
+            // 
+            this.pictureBoxGuest.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGuest.Image")));
+            this.pictureBoxGuest.Location = new System.Drawing.Point(14, 3);
+            this.pictureBoxGuest.Name = "pictureBoxGuest";
+            this.pictureBoxGuest.Size = new System.Drawing.Size(122, 117);
+            this.pictureBoxGuest.TabIndex = 0;
+            this.pictureBoxGuest.TabStop = false;
+            this.pictureBoxGuest.Click += new System.EventHandler(this.panelGuest_Click);
+            // 
+            // labelGuest
+            // 
+            this.labelGuest.AutoSize = true;
+            this.labelGuest.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGuest.ForeColor = System.Drawing.Color.MediumPurple;
+            this.labelGuest.Location = new System.Drawing.Point(35, 123);
+            this.labelGuest.Name = "labelGuest";
+            this.labelGuest.Size = new System.Drawing.Size(93, 34);
+            this.labelGuest.TabIndex = 1;
+            this.labelGuest.Text = "Гость";
+            this.labelGuest.Click += new System.EventHandler(this.panelGuest_Click);
+            // 
             // panelEmployee
             // 
             this.panelEmployee.Controls.Add(this.pictureBox1);
@@ -138,6 +172,7 @@
             this.panelEmployee.Name = "panelEmployee";
             this.panelEmployee.Size = new System.Drawing.Size(165, 162);
             this.panelEmployee.TabIndex = 3;
+            this.panelEmployee.Visible = false;
             this.panelEmployee.Click += new System.EventHandler(this.panelEmployee_Click);
             // 
             // pictureBox1
@@ -187,39 +222,6 @@
             this.labelLogin.TabIndex = 1;
             this.labelLogin.Text = "Вход\r\n";
             // 
-            // panelGuest
-            // 
-            this.panelGuest.Controls.Add(this.pictureBoxGuest);
-            this.panelGuest.Controls.Add(this.labelGuest);
-            this.panelGuest.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelGuest.Location = new System.Drawing.Point(253, 102);
-            this.panelGuest.Name = "panelGuest";
-            this.panelGuest.Size = new System.Drawing.Size(165, 162);
-            this.panelGuest.TabIndex = 3;
-            this.panelGuest.Click += new System.EventHandler(this.panelGuest_Click);
-            // 
-            // pictureBoxGuest
-            // 
-            this.pictureBoxGuest.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGuest.Image")));
-            this.pictureBoxGuest.Location = new System.Drawing.Point(14, 3);
-            this.pictureBoxGuest.Name = "pictureBoxGuest";
-            this.pictureBoxGuest.Size = new System.Drawing.Size(122, 117);
-            this.pictureBoxGuest.TabIndex = 0;
-            this.pictureBoxGuest.TabStop = false;
-            this.pictureBoxGuest.Click += new System.EventHandler(this.panelGuest_Click);
-            // 
-            // labelGuest
-            // 
-            this.labelGuest.AutoSize = true;
-            this.labelGuest.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGuest.ForeColor = System.Drawing.Color.MediumPurple;
-            this.labelGuest.Location = new System.Drawing.Point(35, 123);
-            this.labelGuest.Name = "labelGuest";
-            this.labelGuest.Size = new System.Drawing.Size(93, 34);
-            this.labelGuest.TabIndex = 1;
-            this.labelGuest.Text = "Гость";
-            this.labelGuest.Click += new System.EventHandler(this.panelGuest_Click);
-            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -232,19 +234,20 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "BookWisePublishing";
+            this.Load += new System.EventHandler(this.StartForm_Load);
             this.panelName.ResumeLayout(false);
             this.panelName.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             this.panelScndLogin.ResumeLayout(false);
-            this.panelEmployee.ResumeLayout(false);
-            this.panelEmployee.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelGuest.ResumeLayout(false);
             this.panelGuest.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuest)).EndInit();
+            this.panelEmployee.ResumeLayout(false);
+            this.panelEmployee.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

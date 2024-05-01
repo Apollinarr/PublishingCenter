@@ -263,6 +263,7 @@
             this.labelBack.Size = new System.Drawing.Size(62, 19);
             this.labelBack.TabIndex = 28;
             this.labelBack.Text = "Назад";
+            this.labelBack.Visible = false;
             this.labelBack.Click += new System.EventHandler(this.labelBack_Click);
             // 
             // labelReg

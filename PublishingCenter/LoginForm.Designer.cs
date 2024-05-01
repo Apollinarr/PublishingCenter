@@ -167,6 +167,7 @@
             this.labelBack.Size = new System.Drawing.Size(62, 19);
             this.labelBack.TabIndex = 2;
             this.labelBack.Text = "Назад";
+            this.labelBack.Visible = false;
             this.labelBack.Click += new System.EventHandler(this.labelBack_Click);
             // 
             // LoginForm
@@ -188,7 +189,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
-            this.Text = "Form2";
+            this.Text = "LogIn";
             this.ResumeLayout(false);
             this.PerformLayout();
 
