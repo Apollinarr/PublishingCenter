@@ -17,6 +17,11 @@ namespace PublishingCenter
             InitializeComponent();
         }
 
+        private void StartForm_Load(object sender, EventArgs e)
+        {
+            ShowLoginForm();
+        }
+
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -57,6 +62,7 @@ namespace PublishingCenter
             forgotPasswordForm.Show();
         }
 
+        //unused
         private void panelGuest_Click(object sender, EventArgs e)
         {
             Employee employee = new Employee();

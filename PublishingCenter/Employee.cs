@@ -53,6 +53,7 @@ namespace PublishingCenter
             }
         }
 
+        //unused
         public void SetGuest()
         {
             ID = -1;

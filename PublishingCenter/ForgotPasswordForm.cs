@@ -36,6 +36,8 @@ namespace PublishingCenter
         private void labelBack_Click(object sender, EventArgs e)
         {
             Hide();
+            StartForm startForm = (StartForm)Application.OpenForms["StartForm"];
+            startForm.ShowLoginForm();
         }
 
         private string GenerateCode()
@@ -151,6 +153,8 @@ namespace PublishingCenter
                 connection.Close();
 
                 Hide();
+                StartForm startForm = (StartForm)Application.OpenForms["StartForm"];
+                startForm.ShowLoginForm();
             }
             catch (Exception ex)
             {
