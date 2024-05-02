@@ -140,54 +140,72 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connection.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="ForgotPasswordForm.cs">
+    <Compile Include="Main\Authors\AuthorCardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgotPasswordForm.Designer.cs">
+    <Compile Include="Main\Authors\AuthorCardForm.Designer.cs">
+      <DependentUpon>AuthorCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Authors\AuthorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Authors\AuthorsForm.Designer.cs">
+      <DependentUpon>AuthorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Connection.cs" />
+    <Compile Include="Classes\Employee.cs" />
+    <Compile Include="Start\ForgotPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\ForgotPasswordForm.Designer.cs">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mailer.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Classes\Mailer.cs" />
+    <Compile Include="Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegForm.cs">
+    <Compile Include="Start\RegForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegForm.Designer.cs">
+    <Compile Include="Start\RegForm.Designer.cs">
       <DependentUpon>RegForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartForm.cs">
+    <Compile Include="Start\StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartForm.Designer.cs">
+    <Compile Include="Start\StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Start\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Start\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ForgotPasswordForm.resx">
+    <EmbeddedResource Include="Main\Authors\AuthorCardForm.resx">
+      <DependentUpon>AuthorCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Authors\AuthorsForm.resx">
+      <DependentUpon>AuthorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start\ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegForm.resx">
+    <EmbeddedResource Include="Start\RegForm.resx">
       <DependentUpon>RegForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartForm.resx">
+    <EmbeddedResource Include="Start\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Start\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -214,5 +232,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

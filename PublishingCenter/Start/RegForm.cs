@@ -41,6 +41,13 @@ namespace PublishingCenter
                     textBoxLastName.Focus();
                     return;
                 }
+                else if (textBoxMiddleName.Text.Length == 0)
+                {
+                    MessageBox.Show("Неверно введено отчество.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    connection.Close();
+                    textBoxLastName.Focus();
+                    return;
+                }
                 else if (comboBoxPosition.SelectedIndex == -1)
                 {
                     MessageBox.Show("Выберите должность.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
