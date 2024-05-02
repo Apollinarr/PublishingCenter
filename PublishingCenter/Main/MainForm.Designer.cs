@@ -44,8 +44,8 @@
             this.panelSections = new System.Windows.Forms.Panel();
             this.buttonSettings = new Guna.UI2.WinForms.Guna2Button();
             this.buttonReports = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonCustomers = new Guna.UI2.WinForms.Guna2Button();
             this.buttonOrders = new Guna.UI2.WinForms.Guna2Button();
-            this.buttonEditions = new Guna.UI2.WinForms.Guna2Button();
             this.buttonAuthors = new Guna.UI2.WinForms.Guna2Button();
             this.buttonBooks = new Guna.UI2.WinForms.Guna2Button();
             this.panelContainer = new System.Windows.Forms.Panel();
@@ -194,8 +194,8 @@
             this.panelSections.BackColor = System.Drawing.Color.White;
             this.panelSections.Controls.Add(this.buttonSettings);
             this.panelSections.Controls.Add(this.buttonReports);
+            this.panelSections.Controls.Add(this.buttonCustomers);
             this.panelSections.Controls.Add(this.buttonOrders);
-            this.panelSections.Controls.Add(this.buttonEditions);
             this.panelSections.Controls.Add(this.buttonAuthors);
             this.panelSections.Controls.Add(this.buttonBooks);
             this.panelSections.Location = new System.Drawing.Point(0, 58);
@@ -243,6 +243,26 @@
             this.buttonReports.TabIndex = 0;
             this.buttonReports.Text = "Отчеты";
             // 
+            // buttonCustomers
+            // 
+            this.buttonCustomers.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.buttonCustomers.CheckedState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonCustomers.CustomBorderColor = System.Drawing.Color.White;
+            this.buttonCustomers.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.buttonCustomers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonCustomers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonCustomers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonCustomers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonCustomers.FillColor = System.Drawing.Color.White;
+            this.buttonCustomers.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCustomers.ForeColor = System.Drawing.Color.MediumPurple;
+            this.buttonCustomers.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonCustomers.Location = new System.Drawing.Point(510, 0);
+            this.buttonCustomers.Name = "buttonCustomers";
+            this.buttonCustomers.Size = new System.Drawing.Size(170, 59);
+            this.buttonCustomers.TabIndex = 0;
+            this.buttonCustomers.Text = "Заказчики";
+            // 
             // buttonOrders
             // 
             this.buttonOrders.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -257,31 +277,11 @@
             this.buttonOrders.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOrders.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonOrders.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
-            this.buttonOrders.Location = new System.Drawing.Point(510, 0);
+            this.buttonOrders.Location = new System.Drawing.Point(340, 0);
             this.buttonOrders.Name = "buttonOrders";
             this.buttonOrders.Size = new System.Drawing.Size(170, 59);
             this.buttonOrders.TabIndex = 0;
             this.buttonOrders.Text = "Заказы";
-            // 
-            // buttonEditions
-            // 
-            this.buttonEditions.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.buttonEditions.CheckedState.CustomBorderColor = System.Drawing.Color.MediumPurple;
-            this.buttonEditions.CustomBorderColor = System.Drawing.Color.White;
-            this.buttonEditions.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.buttonEditions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonEditions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonEditions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonEditions.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonEditions.FillColor = System.Drawing.Color.White;
-            this.buttonEditions.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEditions.ForeColor = System.Drawing.Color.MediumPurple;
-            this.buttonEditions.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
-            this.buttonEditions.Location = new System.Drawing.Point(340, 0);
-            this.buttonEditions.Name = "buttonEditions";
-            this.buttonEditions.Size = new System.Drawing.Size(170, 59);
-            this.buttonEditions.TabIndex = 0;
-            this.buttonEditions.Text = "Тиражи";
             // 
             // buttonAuthors
             // 
@@ -302,6 +302,7 @@
             this.buttonAuthors.Size = new System.Drawing.Size(170, 59);
             this.buttonAuthors.TabIndex = 0;
             this.buttonAuthors.Text = "Авторы";
+            this.buttonAuthors.Click += new System.EventHandler(this.buttonAuthors_Click);
             // 
             // buttonBooks
             // 
@@ -333,7 +334,7 @@
             // 
             // timerAccountMenu
             // 
-            this.timerAccountMenu.Interval = 10;
+            this.timerAccountMenu.Interval = 7;
             this.timerAccountMenu.Tick += new System.EventHandler(this.timerAccountMenu_Tick);
             // 
             // MainForm
@@ -374,8 +375,8 @@
         private Guna.UI2.WinForms.Guna2Button buttonAuthors;
         private Guna.UI2.WinForms.Guna2Button buttonSettings;
         private Guna.UI2.WinForms.Guna2Button buttonReports;
+        private Guna.UI2.WinForms.Guna2Button buttonCustomers;
         private Guna.UI2.WinForms.Guna2Button buttonOrders;
-        private Guna.UI2.WinForms.Guna2Button buttonEditions;
         private System.Windows.Forms.Panel panelUser;
         private System.Windows.Forms.Button buttonUser;
         private System.Windows.Forms.PictureBox pictureBox1;

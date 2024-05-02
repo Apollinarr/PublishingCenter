@@ -19,6 +19,8 @@ namespace PublishingCenter
             MaximizedBounds = Screen.GetWorkingArea(this);
             panelHeader.Width = MaximizedBounds.Width;
             panelSections.Width = MaximizedBounds.Width;
+            panelContainer.Width = MaximizedBounds.Width;
+            panelContainer.Height = MaximizedBounds.Height - panelHeader.Height - panelSections.Height;
             flowLayoutPanelUser.Location = new Point(Width - flowLayoutPanelUser.Width - 10, 0);
             buttonUser.Text = Employee.FirstName + " " + Employee.LastName;
             //if (Employee.Position != 4)
@@ -38,7 +40,7 @@ namespace PublishingCenter
             if (!menuExpand)
             {
                 flowLayoutPanelUser.Height += 5;
-                if (flowLayoutPanelUser.Height >= 116)
+                if (flowLayoutPanelUser.Height >= 90)
                 {
                     timerAccountMenu.Stop();
                     menuExpand = true;
@@ -73,6 +75,16 @@ namespace PublishingCenter
             //ActiveForm.Show();
             //StartForm startForm = new StartForm();
             //startForm.Show();
+        }
+
+        private void buttonAuthors_Click(object sender, EventArgs e)
+        {
+            AuthorsForm authorsForm = new AuthorsForm();
+            authorsForm.TopLevel = false;
+            authorsForm.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(authorsForm);
+            authorsForm.BringToFront();
+            authorsForm.Show();
         }
     }
 }

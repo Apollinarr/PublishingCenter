@@ -124,6 +124,7 @@
             // 
             this.panelScndLogin.Controls.Add(this.panelGuest);
             this.panelScndLogin.Controls.Add(this.panelEmployee);
+            this.panelScndLogin.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelScndLogin.Location = new System.Drawing.Point(0, 77);
             this.panelScndLogin.Name = "panelScndLogin";
             this.panelScndLogin.Size = new System.Drawing.Size(450, 453);
