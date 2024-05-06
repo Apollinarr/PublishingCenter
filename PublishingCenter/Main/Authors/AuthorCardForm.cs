@@ -44,7 +44,7 @@ namespace PublishingCenter
                     connection.Open();
                     string query = "SELECT * FROM Authors WHERE id = @Id LIMIT 1";
                     MySqlCommand command = new MySqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@Id", id);
+                    command.Parameters.AddWithValue("@Id", ID);
 
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {

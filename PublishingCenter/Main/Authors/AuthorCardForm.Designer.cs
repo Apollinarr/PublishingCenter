@@ -83,7 +83,7 @@
             this.labelSecondName.ForeColor = System.Drawing.Color.MediumPurple;
             this.labelSecondName.Location = new System.Drawing.Point(403, 54);
             this.labelSecondName.Name = "labelSecondName";
-            this.labelSecondName.Size = new System.Drawing.Size(115, 27);
+            this.labelSecondName.Size = new System.Drawing.Size(94, 23);
             this.labelSecondName.TabIndex = 5;
             this.labelSecondName.Text = "Фамилия";
             // 
@@ -91,24 +91,22 @@
             // 
             this.textBoxLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textBoxLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLastName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLastName.Font = new System.Drawing.Font("Nirmala UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLastName.Location = new System.Drawing.Point(408, 84);
             this.textBoxLastName.MaxLength = 50;
-            this.textBoxLastName.Multiline = true;
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(297, 40);
+            this.textBoxLastName.Size = new System.Drawing.Size(297, 32);
             this.textBoxLastName.TabIndex = 0;
             // 
             // textBoxFirstName
             // 
             this.textBoxFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textBoxFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFirstName.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFirstName.Font = new System.Drawing.Font("Nirmala UI", 18F);
             this.textBoxFirstName.Location = new System.Drawing.Point(408, 168);
             this.textBoxFirstName.MaxLength = 50;
-            this.textBoxFirstName.Multiline = true;
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(297, 40);
+            this.textBoxFirstName.Size = new System.Drawing.Size(297, 32);
             this.textBoxFirstName.TabIndex = 1;
             // 
             // labelFirstName
@@ -118,7 +116,7 @@
             this.labelFirstName.ForeColor = System.Drawing.Color.MediumPurple;
             this.labelFirstName.Location = new System.Drawing.Point(403, 138);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(58, 27);
+            this.labelFirstName.Size = new System.Drawing.Size(48, 23);
             this.labelFirstName.TabIndex = 5;
             this.labelFirstName.Text = "Имя";
             // 
@@ -126,12 +124,11 @@
             // 
             this.textBoxMiddleName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textBoxMiddleName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxMiddleName.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMiddleName.Font = new System.Drawing.Font("Nirmala UI", 18F);
             this.textBoxMiddleName.Location = new System.Drawing.Point(408, 253);
             this.textBoxMiddleName.MaxLength = 50;
-            this.textBoxMiddleName.Multiline = true;
             this.textBoxMiddleName.Name = "textBoxMiddleName";
-            this.textBoxMiddleName.Size = new System.Drawing.Size(297, 40);
+            this.textBoxMiddleName.Size = new System.Drawing.Size(297, 32);
             this.textBoxMiddleName.TabIndex = 2;
             // 
             // labelMiddleName
@@ -141,7 +138,7 @@
             this.labelMiddleName.ForeColor = System.Drawing.Color.MediumPurple;
             this.labelMiddleName.Location = new System.Drawing.Point(403, 223);
             this.labelMiddleName.Name = "labelMiddleName";
-            this.labelMiddleName.Size = new System.Drawing.Size(125, 27);
+            this.labelMiddleName.Size = new System.Drawing.Size(103, 23);
             this.labelMiddleName.TabIndex = 5;
             this.labelMiddleName.Text = "Отчество";
             // 
@@ -166,7 +163,7 @@
             this.labelDateOfBirthday.ForeColor = System.Drawing.Color.MediumPurple;
             this.labelDateOfBirthday.Location = new System.Drawing.Point(403, 307);
             this.labelDateOfBirthday.Name = "labelDateOfBirthday";
-            this.labelDateOfBirthday.Size = new System.Drawing.Size(197, 27);
+            this.labelDateOfBirthday.Size = new System.Drawing.Size(162, 23);
             this.labelDateOfBirthday.TabIndex = 5;
             this.labelDateOfBirthday.Text = "Дата рождения";
             // 
@@ -175,6 +172,7 @@
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.ResizeForm = false;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // pictureBox1
             // 
@@ -192,7 +190,7 @@
             this.buttonChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChange.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonChange.ForeColor = System.Drawing.Color.White;
-            this.buttonChange.Location = new System.Drawing.Point(262, 427);
+            this.buttonChange.Location = new System.Drawing.Point(54, 427);
             this.buttonChange.Name = "buttonChange";
             this.buttonChange.Size = new System.Drawing.Size(144, 49);
             this.buttonChange.TabIndex = 6;
@@ -207,7 +205,7 @@
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonDelete.Location = new System.Drawing.Point(54, 427);
+            this.buttonDelete.Location = new System.Drawing.Point(262, 427);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(144, 49);
             this.buttonDelete.TabIndex = 6;
