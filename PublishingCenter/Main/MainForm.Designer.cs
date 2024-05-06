@@ -50,6 +50,7 @@
             this.buttonBooks = new Guna.UI2.WinForms.Guna2Button();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.timerAccountMenu = new System.Windows.Forms.Timer(this.components);
+            this.buttonContracts = new Guna.UI2.WinForms.Guna2Button();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.flowLayoutPanelUser.SuspendLayout();
@@ -195,12 +196,13 @@
             this.panelSections.Controls.Add(this.buttonSettings);
             this.panelSections.Controls.Add(this.buttonReports);
             this.panelSections.Controls.Add(this.buttonCustomers);
+            this.panelSections.Controls.Add(this.buttonContracts);
             this.panelSections.Controls.Add(this.buttonOrders);
             this.panelSections.Controls.Add(this.buttonAuthors);
             this.panelSections.Controls.Add(this.buttonBooks);
             this.panelSections.Location = new System.Drawing.Point(0, 58);
             this.panelSections.Name = "panelSections";
-            this.panelSections.Size = new System.Drawing.Size(1020, 59);
+            this.panelSections.Size = new System.Drawing.Size(1190, 59);
             this.panelSections.TabIndex = 1;
             // 
             // buttonSettings
@@ -217,7 +219,7 @@
             this.buttonSettings.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSettings.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonSettings.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
-            this.buttonSettings.Location = new System.Drawing.Point(850, 0);
+            this.buttonSettings.Location = new System.Drawing.Point(1020, 0);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Size = new System.Drawing.Size(170, 59);
             this.buttonSettings.TabIndex = 0;
@@ -237,7 +239,7 @@
             this.buttonReports.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonReports.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonReports.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
-            this.buttonReports.Location = new System.Drawing.Point(680, 0);
+            this.buttonReports.Location = new System.Drawing.Point(850, 0);
             this.buttonReports.Name = "buttonReports";
             this.buttonReports.Size = new System.Drawing.Size(170, 59);
             this.buttonReports.TabIndex = 0;
@@ -257,7 +259,7 @@
             this.buttonCustomers.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCustomers.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonCustomers.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
-            this.buttonCustomers.Location = new System.Drawing.Point(510, 0);
+            this.buttonCustomers.Location = new System.Drawing.Point(690, 0);
             this.buttonCustomers.Name = "buttonCustomers";
             this.buttonCustomers.Size = new System.Drawing.Size(170, 59);
             this.buttonCustomers.TabIndex = 0;
@@ -277,7 +279,7 @@
             this.buttonOrders.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOrders.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonOrders.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
-            this.buttonOrders.Location = new System.Drawing.Point(340, 0);
+            this.buttonOrders.Location = new System.Drawing.Point(510, 0);
             this.buttonOrders.Name = "buttonOrders";
             this.buttonOrders.Size = new System.Drawing.Size(170, 59);
             this.buttonOrders.TabIndex = 0;
@@ -329,7 +331,7 @@
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelContainer.Location = new System.Drawing.Point(0, 113);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1020, 487);
+            this.panelContainer.Size = new System.Drawing.Size(1190, 487);
             this.panelContainer.TabIndex = 2;
             // 
             // timerAccountMenu
@@ -337,11 +339,32 @@
             this.timerAccountMenu.Interval = 7;
             this.timerAccountMenu.Tick += new System.EventHandler(this.timerAccountMenu_Tick);
             // 
+            // buttonContracts
+            // 
+            this.buttonContracts.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.buttonContracts.CheckedState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonContracts.CustomBorderColor = System.Drawing.Color.White;
+            this.buttonContracts.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.buttonContracts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonContracts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonContracts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonContracts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonContracts.FillColor = System.Drawing.Color.White;
+            this.buttonContracts.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonContracts.ForeColor = System.Drawing.Color.MediumPurple;
+            this.buttonContracts.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
+            this.buttonContracts.Location = new System.Drawing.Point(340, 0);
+            this.buttonContracts.Name = "buttonContracts";
+            this.buttonContracts.Size = new System.Drawing.Size(170, 59);
+            this.buttonContracts.TabIndex = 0;
+            this.buttonContracts.Text = "Контракты";
+            this.buttonContracts.Click += new System.EventHandler(this.buttonContracts_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 600);
+            this.ClientSize = new System.Drawing.Size(1190, 600);
             this.Controls.Add(this.flowLayoutPanelUser);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelSections);
@@ -386,5 +409,6 @@
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelUser;
         private System.Windows.Forms.Timer timerAccountMenu;
+        private Guna.UI2.WinForms.Guna2Button buttonContracts;
     }
 }
