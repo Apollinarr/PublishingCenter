@@ -31,6 +31,10 @@ namespace PublishingCenter.Main.Books
                 buttonChange.Visible = false;
 
                 SearchAuthors();
+                if (comboBoxAuthor.Items.Count == 0)
+                {
+                    MessageBox.Show("Нет авторов. Добавьте автора.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 SearchGenres();
             }
             else
@@ -256,9 +260,23 @@ namespace PublishingCenter.Main.Books
                 textBoxEditionQuantity.Focus();
                 return false;
             }
+            if (Convert.ToInt32(textBoxEditionQuantity.Text) == 0)
+            {
+                MessageBox.Show("Тираж должен быть больше 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
+                textBoxEditionQuantity.Focus();
+                return false;
+            }
             if (textBoxCostPrice.Text.Length == 0)
             {
                 MessageBox.Show("Напишите себестоимость.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
+                textBoxCostPrice.Focus();
+                return false;
+            }
+            if (Convert.ToInt32(textBoxCostPrice.Text) == 0)
+            {
+                MessageBox.Show("Себестоимость должна быть больше 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connection.Close();
                 textBoxCostPrice.Focus();
                 return false;
@@ -270,9 +288,23 @@ namespace PublishingCenter.Main.Books
                 textBoxSellingPrice.Focus();
                 return false;
             }
+            if (Convert.ToInt32(textBoxSellingPrice.Text) == 0)
+            {
+                MessageBox.Show("Цена должна быть больше 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
+                textBoxSellingPrice.Focus();
+                return false;
+            }
             if (textBoxRoyalty.Text.Length == 0)
             {
                 MessageBox.Show("Напишите гонорар.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
+                textBoxRoyalty.Focus();
+                return false;
+            }
+            if (Convert.ToInt32(textBoxRoyalty.Text) == 0)
+            {
+                MessageBox.Show("Гонорар должен быть больше 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connection.Close();
                 textBoxRoyalty.Focus();
                 return false;
