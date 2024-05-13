@@ -132,7 +132,7 @@
             this.textBoxContactPerson.MaxLength = 50;
             this.textBoxContactPerson.Name = "textBoxContactPerson";
             this.textBoxContactPerson.Size = new System.Drawing.Size(297, 32);
-            this.textBoxContactPerson.TabIndex = 12;
+            this.textBoxContactPerson.TabIndex = 3;
             // 
             // labelAddress
             // 
@@ -154,7 +154,7 @@
             this.textBoxAddress.MaxLength = 50;
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(297, 32);
-            this.textBoxAddress.TabIndex = 10;
+            this.textBoxAddress.TabIndex = 1;
             // 
             // labelName
             // 
@@ -176,7 +176,7 @@
             this.textBoxName.MaxLength = 50;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(297, 32);
-            this.textBoxName.TabIndex = 9;
+            this.textBoxName.TabIndex = 0;
             // 
             // buttonClose
             // 
@@ -207,7 +207,7 @@
             this.textBoxPhone.Mask = "+7 (999) 000-00-00";
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(297, 35);
-            this.textBoxPhone.TabIndex = 22;
+            this.textBoxPhone.TabIndex = 2;
             // 
             // CustomerCardForm
             // 
