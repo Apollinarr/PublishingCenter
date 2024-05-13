@@ -1,6 +1,7 @@
 ﻿using PublishingCenter.Main.Books;
 using PublishingCenter.Main.Contracts;
 using PublishingCenter.Main.Customers;
+using PublishingCenter.Main.Orders;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -118,6 +119,16 @@ namespace PublishingCenter
             panelContainer.Controls.Add(booksForm);
             booksForm.BringToFront();
             booksForm.Show();
+        }
+
+        private void buttonOrders_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm();
+            orderForm.TopLevel = false;
+            orderForm.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(orderForm);
+            orderForm.BringToFront();
+            orderForm.Show();
         }
     }
 }
