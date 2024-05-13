@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using PublishingCenter.Main.Contracts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,41 +10,51 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PublishingCenter.Main.Contracts
+namespace PublishingCenter.Main.Books
 {
-    public partial class ContractsForm : Form
+    public partial class BooksForm : Form
     {
         private MySqlConnection connection;
-        public ContractsForm()
+        public BooksForm()
         {
             InitializeComponent();
             connection = new Connection().GetConnectionString();
 
-            dataGridViewContracts.Width = Width;
-            buttonAdd.Location = new System.Drawing.Point(dataGridViewContracts.Width + 130, dataGridViewContracts.Location.Y);
+            dataGridViewBooks.Width = Width;
+            buttonAdd.Location = new System.Drawing.Point(dataGridViewBooks.Width + 130, dataGridViewBooks.Location.Y);
         }
 
-        private void ContractsForm_Load(object sender, EventArgs e)
+        private void BooksForm_Load(object sender, EventArgs e)
         {
             UpdateTable();
         }
 
         private void UpdateTable()
         {
-            dataGridViewContracts.Rows.Clear();
+            dataGridViewBooks.Rows.Clear();
 
             try
             {
                 if (connection.State == ConnectionState.Closed)
                     connection.Open();
-                string query = "SELECT Contracts.id, CONCAT(Authors.last_name, ' ', LEFT(Authors.first_name, 1), '.', LEFT(Authors.middle_name, 1), '.') AS author_name, contract_date, duration_years, status, termination_date FROM Contracts INNER JOIN Authors ON Contracts.author_id = Authors.id";
+
+                string query = @"SELECT Books.id, Books.book_code, Books.title, Books.edition_quantity, Books.publication_date, 
+                                Books.cost_price, Books.selling_price, Books.royalty, 
+                                CONCAT(Authors.last_name, ' ', LEFT(Authors.first_name, 1), '.', LEFT(Authors.middle_name, 1), '.') AS author_name, 
+                                Genres.genre_name 
+                         FROM Books 
+                         INNER JOIN Authors ON Books.author_id = Authors.id 
+                         INNER JOIN Genres ON Books.genre_id = Genres.id";
+
                 MySqlCommand command = new MySqlCommand(query, connection);
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
+
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    dataGridViewContracts.Rows.Add(row.ItemArray[0], row.ItemArray[1], ((DateTime)row.ItemArray[2]).ToShortDateString(), row.ItemArray[3], row.ItemArray[4], ((DateTime)row.ItemArray[5]).ToShortDateString());
+                    dataGridViewBooks.Rows.Add(row.ItemArray[0], row.ItemArray[1], row.ItemArray[2], row.ItemArray[3], ((DateTime)row.ItemArray[4]).ToShortDateString(),
+                                                row.ItemArray[5], row.ItemArray[6], row.ItemArray[7], row.ItemArray[8], row.ItemArray[9]);
                 }
             }
             catch (Exception ex)
@@ -59,21 +70,21 @@ namespace PublishingCenter.Main.Contracts
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            ContractCardForm contractCardForm = new ContractCardForm(true);
-            contractCardForm.ShowDialog();
+            BookCardForm bookCardForm = new BookCardForm(true);
+            bookCardForm.ShowDialog();
 
             UpdateTable();
         }
 
-        private void dataGridViewContracts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 && e.RowIndex >= 0)
+            if (e.ColumnIndex == 1 && e.RowIndex >= 0)
             {
                 try
                 {
-                    string id = dataGridViewContracts.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    ContractCardForm contractCardForm = new ContractCardForm(false, id);
-                    contractCardForm.ShowDialog();
+                    string id = dataGridViewBooks.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    BookCardForm bookCardForm = new BookCardForm(false, id);
+                    bookCardForm.ShowDialog();
 
                 }
                 catch (Exception ex)
@@ -88,16 +99,16 @@ namespace PublishingCenter.Main.Contracts
                     UpdateTable();
                 }
             }
-            if (e.ColumnIndex == 1 && e.RowIndex >= 0)
+            if (e.ColumnIndex == 8 && e.RowIndex >= 0)
             {
                 try
                 {
-                    string contractId = dataGridViewContracts.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    string bookId = dataGridViewBooks.Rows[e.RowIndex].Cells[0].Value.ToString();
                     if (connection.State == ConnectionState.Closed)
                         connection.Open();
-                    string authorIdQuery = "SELECT author_id FROM Contracts WHERE id = @ContractId";
+                    string authorIdQuery = "SELECT author_id FROM Books WHERE id = @BookId";
                     MySqlCommand authorIdCmd = new MySqlCommand(authorIdQuery, connection);
-                    authorIdCmd.Parameters.AddWithValue("@ContractId", contractId);
+                    authorIdCmd.Parameters.AddWithValue("@BookId", bookId);
                     object authorIdResult = authorIdCmd.ExecuteScalar();
 
                     if (authorIdResult != null)

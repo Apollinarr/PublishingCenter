@@ -1,4 +1,5 @@
-﻿using PublishingCenter.Main.Contracts;
+﻿using PublishingCenter.Main.Books;
+using PublishingCenter.Main.Contracts;
 using PublishingCenter.Main.Customers;
 using System;
 using System.Collections.Generic;
@@ -107,6 +108,16 @@ namespace PublishingCenter
             panelContainer.Controls.Add(customersForm);
             customersForm.BringToFront();
             customersForm.Show();
+        }
+
+        private void buttonBooks_Click(object sender, EventArgs e)
+        {
+            BooksForm booksForm = new BooksForm();
+            booksForm.TopLevel = false;
+            booksForm.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(booksForm);
+            booksForm.BringToFront();
+            booksForm.Show();
         }
     }
 }
