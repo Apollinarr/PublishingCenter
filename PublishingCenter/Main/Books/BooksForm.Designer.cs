@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BooksForm));
             this.buttonAdd = new System.Windows.Forms.Button();
             this.dataGridViewBooks = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -65,10 +65,10 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(848, 10);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAdd.Location = new System.Drawing.Point(1131, 12);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(170, 35);
+            this.buttonAdd.Size = new System.Drawing.Size(227, 43);
             this.buttonAdd.TabIndex = 7;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -76,20 +76,21 @@
             // 
             // dataGridViewBooks
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dataGridViewBooks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewBooks.AllowUserToResizeColumns = false;
+            this.dataGridViewBooks.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridViewBooks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewBooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.dataGridViewBooks.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewBooks.ColumnHeadersHeight = 40;
-            this.dataGridViewBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dataGridViewBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
             this.ColumnBookCode,
@@ -101,22 +102,23 @@
             this.ColumnRoyalty,
             this.ColumnAuthor,
             this.ColumnGenre});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBooks.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBooks.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewBooks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewBooks.Location = new System.Drawing.Point(9, 10);
-            this.dataGridViewBooks.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewBooks.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewBooks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewBooks.Name = "dataGridViewBooks";
             this.dataGridViewBooks.RowHeadersVisible = false;
             this.dataGridViewBooks.RowHeadersWidth = 51;
+            this.dataGridViewBooks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewBooks.RowTemplate.Height = 24;
-            this.dataGridViewBooks.Size = new System.Drawing.Size(817, 421);
+            this.dataGridViewBooks.Size = new System.Drawing.Size(1089, 518);
             this.dataGridViewBooks.TabIndex = 6;
             this.dataGridViewBooks.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridViewBooks.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -129,7 +131,7 @@
             this.dataGridViewBooks.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewBooks.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dataGridViewBooks.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewBooks.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridViewBooks.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewBooks.ThemeStyle.HeaderStyle.Height = 40;
             this.dataGridViewBooks.ThemeStyle.ReadOnly = false;
             this.dataGridViewBooks.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -154,8 +156,8 @@
             // ColumnBookCode
             // 
             this.ColumnBookCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.ColumnBookCode.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.ColumnBookCode.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColumnBookCode.FillWeight = 503.7433F;
             this.ColumnBookCode.HeaderText = "Код";
             this.ColumnBookCode.MinimumWidth = 6;
@@ -167,8 +169,8 @@
             // ColumnTitle
             // 
             this.ColumnTitle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.ColumnTitle.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.ColumnTitle.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColumnTitle.FillWeight = 19.25134F;
             this.ColumnTitle.HeaderText = "Название";
             this.ColumnTitle.MinimumWidth = 6;
@@ -197,8 +199,8 @@
             // ColumnCostPrice
             // 
             this.ColumnCostPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.ColumnCostPrice.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.ColumnCostPrice.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColumnCostPrice.FillWeight = 19.25134F;
             this.ColumnCostPrice.HeaderText = "Себестоимость";
             this.ColumnCostPrice.MinimumWidth = 6;
@@ -241,9 +243,10 @@
             // pictureBoxUpdate
             // 
             this.pictureBoxUpdate.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUpdate.Image")));
-            this.pictureBoxUpdate.Location = new System.Drawing.Point(831, 10);
+            this.pictureBoxUpdate.Location = new System.Drawing.Point(1108, 12);
+            this.pictureBoxUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxUpdate.Name = "pictureBoxUpdate";
-            this.pictureBoxUpdate.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxUpdate.Size = new System.Drawing.Size(43, 39);
             this.pictureBoxUpdate.TabIndex = 8;
             this.pictureBoxUpdate.TabStop = false;
             this.pictureBoxUpdate.Click += new System.EventHandler(this.pictureBoxUpdate_Click);
@@ -254,12 +257,12 @@
             this.dateTimePickerSearch.FillColor = System.Drawing.Color.MediumPurple;
             this.dateTimePickerSearch.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.dateTimePickerSearch.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimePickerSearch.Location = new System.Drawing.Point(829, 188);
-            this.dateTimePickerSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerSearch.Location = new System.Drawing.Point(1105, 231);
+            this.dateTimePickerSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerSearch.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerSearch.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerSearch.Name = "dateTimePickerSearch";
-            this.dateTimePickerSearch.Size = new System.Drawing.Size(242, 32);
+            this.dateTimePickerSearch.Size = new System.Drawing.Size(323, 39);
             this.dateTimePickerSearch.TabIndex = 25;
             this.dateTimePickerSearch.Value = new System.DateTime(2024, 5, 14, 0, 0, 0, 0);
             // 
@@ -268,11 +271,11 @@
             this.textBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearch.Font = new System.Drawing.Font("Nirmala UI", 18F);
-            this.textBoxSearch.Location = new System.Drawing.Point(829, 188);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxSearch.Location = new System.Drawing.Point(1105, 231);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSearch.MaxLength = 50;
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(242, 32);
+            this.textBoxSearch.Size = new System.Drawing.Size(323, 32);
             this.textBoxSearch.TabIndex = 24;
             // 
             // labelAttribute
@@ -280,8 +283,7 @@
             this.labelAttribute.AutoSize = true;
             this.labelAttribute.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAttribute.ForeColor = System.Drawing.Color.MediumPurple;
-            this.labelAttribute.Location = new System.Drawing.Point(825, 163);
-            this.labelAttribute.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelAttribute.Location = new System.Drawing.Point(1100, 201);
             this.labelAttribute.Name = "labelAttribute";
             this.labelAttribute.Size = new System.Drawing.Size(91, 23);
             this.labelAttribute.TabIndex = 22;
@@ -292,8 +294,7 @@
             this.labelSearch.AutoSize = true;
             this.labelSearch.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelSearch.ForeColor = System.Drawing.Color.MediumPurple;
-            this.labelSearch.Location = new System.Drawing.Point(825, 83);
-            this.labelSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSearch.Location = new System.Drawing.Point(1100, 102);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(68, 23);
             this.labelSearch.TabIndex = 23;
@@ -312,10 +313,10 @@
             "Выход в печать",
             "Автор",
             "Жанр"});
-            this.comboBoxSearch.Location = new System.Drawing.Point(829, 108);
-            this.comboBoxSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxSearch.Location = new System.Drawing.Point(1105, 133);
+            this.comboBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSearch.Name = "comboBoxSearch";
-            this.comboBoxSearch.Size = new System.Drawing.Size(242, 33);
+            this.comboBoxSearch.Size = new System.Drawing.Size(321, 33);
             this.comboBoxSearch.TabIndex = 21;
             this.comboBoxSearch.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearch_SelectedIndexChanged);
             // 
@@ -326,10 +327,10 @@
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearch.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonSearch.ForeColor = System.Drawing.Color.White;
-            this.buttonSearch.Location = new System.Drawing.Point(901, 262);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSearch.Location = new System.Drawing.Point(1201, 322);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(170, 35);
+            this.buttonSearch.Size = new System.Drawing.Size(227, 43);
             this.buttonSearch.TabIndex = 20;
             this.buttonSearch.Text = "Поиск";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -337,9 +338,9 @@
             // 
             // BooksForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 462);
+            this.ClientSize = new System.Drawing.Size(1443, 569);
             this.Controls.Add(this.dateTimePickerSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelAttribute);
@@ -351,7 +352,7 @@
             this.Controls.Add(this.dataGridViewBooks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BooksForm";
             this.Text = "BooksForm";
             this.Load += new System.EventHandler(this.BooksForm_Load);

@@ -56,23 +56,12 @@ namespace PublishingCenter
                 Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
             };
             MailMessage mail = new MailMessage();
-            mail.To.Add(mailTo);
+            mail.From = fromAddress;
+            mail.To.Add(toAddress);
             mail.Subject = subject;
             mail.Body = body;
             mail.Attachments.Add(new Attachment(attachmentPath));
-
             smtp.Send(mail);
-
-
-            //using (var message = new MailMessage())
-            //{
-            //    Subject = subject,
-            //    Body = body
-            //    message.Attachments.Add(new Attachment(attachmentPath));
-            //})
-            //{
-            //    smtp.Send(message);
-            //}
         }
     }
 }
