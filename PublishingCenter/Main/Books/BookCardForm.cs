@@ -10,6 +10,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ServiceStack.Script.Lisp;
 
 namespace PublishingCenter.Main.Books
 {
@@ -17,11 +18,23 @@ namespace PublishingCenter.Main.Books
     {
         private MySqlConnection connection;
         private int ID = -1;
-        public BookCardForm(bool isNew, string id = "-1")
+        public BookCardForm(bool isNew, bool isReadOnly, string id = "-1")
         {
             InitializeComponent();
             connection = new Connection().GetConnectionString();
 
+            if (isReadOnly)
+            {
+                textBoxBookCode.Enabled = false;
+                textBoxTitle.Enabled = false;
+                textBoxEditionQuantity.Enabled = false;
+                dateTimePickerPublicationDate.Enabled = false;
+                textBoxCostPrice.Enabled = false;
+                textBoxSellingPrice.Enabled = false;
+                textBoxRoyalty.Enabled = false;
+                comboBoxAuthor.Enabled = false;
+                comboBoxGenre.Enabled = false;
+            }
             if (isNew)
             {
                 buttonAdd.Visible = true;
@@ -40,17 +53,25 @@ namespace PublishingCenter.Main.Books
             else
             {
                 ID = Convert.ToInt32(id);
-                buttonAdd.Visible = false;
-                buttonAdd.Enabled = false;
-                buttonDelete.Visible = true;
-                buttonDelete.Enabled = true;
-                buttonChange.Visible = true;
-                textBoxBookCode.Enabled = false;
-                comboBoxAuthor.Enabled = false;
-                comboBoxGenre.Enabled = false;
-
-                SearchAuthors();
-                SearchGenres();
+                if (isReadOnly)
+                {
+                    buttonAdd.Visible = false;
+                    buttonDelete.Visible = false;
+                    buttonChange.Visible = false;
+                }
+                else
+                {
+                    buttonAdd.Visible = false;
+                    buttonAdd.Enabled = false;
+                    buttonDelete.Visible = true;
+                    buttonDelete.Enabled = true;
+                    buttonChange.Visible = true;
+                    textBoxBookCode.Enabled = false;
+                    comboBoxAuthor.Enabled = false;
+                    comboBoxGenre.Enabled = false;
+                    SearchAuthors();
+                    SearchGenres();
+                }
 
                 try
                 {

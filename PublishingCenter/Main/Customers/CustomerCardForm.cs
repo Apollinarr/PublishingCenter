@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ServiceStack.Script.Lisp;
 
 namespace PublishingCenter.Main.Customers
 {
@@ -15,11 +16,18 @@ namespace PublishingCenter.Main.Customers
     {
         private MySqlConnection connection;
         private int ID = -1;
-        public CustomerCardForm(bool isNew, string id = "-1")
+        public CustomerCardForm(bool isNew, bool isReadOnly, string id = "-1")
         {
             InitializeComponent();
             connection = new Connection().GetConnectionString();
 
+            if (isReadOnly)
+            {
+                textBoxName.Enabled = false;
+                textBoxAddress.Enabled = false;
+                textBoxContactPerson.Enabled = false;
+                textBoxPhone.Enabled = false;
+            }
             if (isNew)
             {
                 buttonAdd.Visible = true;
@@ -31,11 +39,20 @@ namespace PublishingCenter.Main.Customers
             else
             {
                 ID = Convert.ToInt32(id);
-                buttonAdd.Visible = false;
-                buttonAdd.Enabled = false;
-                buttonDelete.Visible = true;
-                buttonDelete.Enabled = true;
-                buttonChange.Visible = true;
+                if (isReadOnly)
+                {
+                    buttonAdd.Visible = false;
+                    buttonDelete.Visible = false;
+                    buttonChange.Visible = false;
+                }
+                else
+                {
+                    buttonAdd.Visible = false;
+                    buttonAdd.Enabled = false;
+                    buttonDelete.Visible = true;
+                    buttonDelete.Enabled = true;
+                    buttonChange.Visible = true;
+                }    
 
                 try
                 {

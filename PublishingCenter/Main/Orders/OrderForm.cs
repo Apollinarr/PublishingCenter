@@ -81,7 +81,7 @@ namespace PublishingCenter.Main.Orders
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            OrderCardForm orderCardForm = new OrderCardForm(true);
+            OrderCardForm orderCardForm = new OrderCardForm(true, false);
             orderCardForm.ShowDialog();
 
             UpdateTable();
@@ -94,7 +94,7 @@ namespace PublishingCenter.Main.Orders
                 try
                 {
                     string id = dataGridViewOrders.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    OrderCardForm orderCardForm = new OrderCardForm(false, id);
+                    OrderCardForm orderCardForm = new OrderCardForm(false, false, id);
                     orderCardForm.ShowDialog();
 
                 }
@@ -125,7 +125,7 @@ namespace PublishingCenter.Main.Orders
                     if (customerIdResult != null)
                     {
                         string customerId = customerIdResult.ToString();
-                        CustomerCardForm customerCardForm = new CustomerCardForm(false, customerId);
+                        CustomerCardForm customerCardForm = new CustomerCardForm(false, true, customerId);
                         customerCardForm.ShowDialog();
                     }
 
@@ -157,7 +157,7 @@ namespace PublishingCenter.Main.Orders
                     if (bookIdResult != null)
                     {
                         string bookId = bookIdResult.ToString();
-                        BookCardForm bookCardForm = new BookCardForm(false, bookId);
+                        BookCardForm bookCardForm = new BookCardForm(false, true, bookId);
                         bookCardForm.ShowDialog();
                     }
 

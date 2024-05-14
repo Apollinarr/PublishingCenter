@@ -78,7 +78,7 @@ namespace PublishingCenter
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            AuthorCardForm authorCardForm = new AuthorCardForm(true);
+            AuthorCardForm authorCardForm = new AuthorCardForm(true, false);
             authorCardForm.ShowDialog();
 
             UpdateTable();
@@ -95,7 +95,7 @@ namespace PublishingCenter
                     //string query = "SELECT * FROM Authors WHERE id = @Id LIMIT 1";
                     //MySqlCommand command = new MySqlCommand(query, connection);
                     //command.Parameters.AddWithValue("@AuthorId", id);
-                    AuthorCardForm authorCardForm = new AuthorCardForm(false, id);
+                    AuthorCardForm authorCardForm = new AuthorCardForm(false, false, id);
                     authorCardForm.ShowDialog();
 
                 }

@@ -71,7 +71,7 @@ namespace PublishingCenter.Main.Contracts
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            ContractCardForm contractCardForm = new ContractCardForm(true);
+            ContractCardForm contractCardForm = new ContractCardForm(true, false);
             contractCardForm.ShowDialog();
 
             UpdateTable();
@@ -84,7 +84,7 @@ namespace PublishingCenter.Main.Contracts
                 try
                 {
                     string id = dataGridViewContracts.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    ContractCardForm contractCardForm = new ContractCardForm(false, id);
+                    ContractCardForm contractCardForm = new ContractCardForm(false, false, id);
                     contractCardForm.ShowDialog();
 
                 }
@@ -115,7 +115,7 @@ namespace PublishingCenter.Main.Contracts
                     if (authorIdResult != null)
                     {
                         string authorId = authorIdResult.ToString();
-                        AuthorCardForm authorCardForm = new AuthorCardForm(false, authorId);
+                        AuthorCardForm authorCardForm = new AuthorCardForm(false, true, authorId);
                         authorCardForm.ShowDialog();
                     }
 

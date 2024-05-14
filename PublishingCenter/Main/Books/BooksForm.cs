@@ -82,7 +82,7 @@ namespace PublishingCenter.Main.Books
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            BookCardForm bookCardForm = new BookCardForm(true);
+            BookCardForm bookCardForm = new BookCardForm(true, false);
             bookCardForm.ShowDialog();
 
             UpdateTable();
@@ -95,7 +95,7 @@ namespace PublishingCenter.Main.Books
                 try
                 {
                     string id = dataGridViewBooks.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    BookCardForm bookCardForm = new BookCardForm(false, id);
+                    BookCardForm bookCardForm = new BookCardForm(false, false, id);
                     bookCardForm.ShowDialog();
 
                 }
@@ -126,7 +126,7 @@ namespace PublishingCenter.Main.Books
                     if (authorIdResult != null)
                     {
                         string authorId = authorIdResult.ToString();
-                        AuthorCardForm authorCardForm = new AuthorCardForm(false, authorId);
+                        AuthorCardForm authorCardForm = new AuthorCardForm(false, true, authorId);
                         authorCardForm.ShowDialog();
                     }
 

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using static ServiceStack.Script.Lisp;
 
 namespace PublishingCenter
 {
@@ -17,11 +18,18 @@ namespace PublishingCenter
     {
         private MySqlConnection connection;
         private int ID = -1;
-        public AuthorCardForm(bool isNew, string id = "-1")
+        public AuthorCardForm(bool isNew, bool isReadOnly, string id = "-1")
         {
             InitializeComponent();
             connection = new Connection().GetConnectionString();
 
+            if (isReadOnly)
+            {
+                textBoxFirstName.Enabled = false;
+                textBoxLastName.Enabled = false;
+                textBoxMiddleName.Enabled = false;
+                dateTimePickerBirth.Enabled = false;
+            }
             if (isNew)
             {
                 buttonAdd.Visible = true;
@@ -35,9 +43,18 @@ namespace PublishingCenter
                 ID = Convert.ToInt32(id);
                 buttonAdd.Visible = false;
                 buttonAdd.Enabled = false;
-                buttonDelete.Visible = true;
-                buttonDelete.Enabled = true;
-                buttonChange.Visible = true;
+                if (isReadOnly) 
+                {
+                    buttonAdd.Visible = false;
+                    buttonDelete.Visible = false;
+                    buttonChange.Visible = false;
+                }
+                else
+                {
+                    buttonDelete.Visible = true;
+                    buttonDelete.Enabled = true;
+                    buttonChange.Visible = true;
+                }
 
                 try
                 {
