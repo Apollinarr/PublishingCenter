@@ -2,6 +2,7 @@
 using PublishingCenter.Main.Contracts;
 using PublishingCenter.Main.Customers;
 using PublishingCenter.Main.Orders;
+using PublishingCenter.Main.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -129,6 +130,16 @@ namespace PublishingCenter
             panelContainer.Controls.Add(orderForm);
             orderForm.BringToFront();
             orderForm.Show();
+        }
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.TopLevel = false;
+            settingsForm.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(settingsForm);
+            settingsForm.BringToFront();
+            settingsForm.Show();
         }
     }
 }
