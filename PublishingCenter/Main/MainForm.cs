@@ -1,5 +1,9 @@
-﻿using PublishingCenter.Main.Contracts;
+﻿using PublishingCenter.Main.Books;
+using PublishingCenter.Main.Contracts;
 using PublishingCenter.Main.Customers;
+using PublishingCenter.Main.Orders;
+using PublishingCenter.Main.reports;
+using PublishingCenter.Main.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +37,23 @@ namespace PublishingCenter
             //{
             //    buttonUser.Text = "Гость";
             //}
+
+            if (Employee.Position == 2)
+            {
+                buttonOrders.Visible = false;
+                buttonCustomers.Visible = false;
+                buttonSettings.Visible = false;
+                buttonReports.Location = new Point(buttonContracts.Location.X + buttonContracts.Width, 0);
+            }
+            if (Employee.Position == 3)
+            {
+                buttonAuthors.Visible = false;
+                buttonContracts.Visible = false;
+                buttonSettings.Visible = false;
+                buttonOrders.Location = new Point(buttonBooks.Width, 0);
+                buttonCustomers.Location = new Point(buttonOrders.Location.X + buttonBooks.Width, 0);
+                buttonReports.Location = new Point(buttonCustomers.Location.X + buttonCustomers.Width, 0);
+            }
         }
 
         bool menuExpand = false;
@@ -107,6 +128,46 @@ namespace PublishingCenter
             panelContainer.Controls.Add(customersForm);
             customersForm.BringToFront();
             customersForm.Show();
+        }
+
+        private void buttonBooks_Click(object sender, EventArgs e)
+        {
+            BooksForm booksForm = new BooksForm();
+            booksForm.TopLevel = false;
+            booksForm.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(booksForm);
+            booksForm.BringToFront();
+            booksForm.Show();
+        }
+
+        private void buttonOrders_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm();
+            orderForm.TopLevel = false;
+            orderForm.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(orderForm);
+            orderForm.BringToFront();
+            orderForm.Show();
+        }
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.TopLevel = false;
+            settingsForm.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(settingsForm);
+            settingsForm.BringToFront();
+            settingsForm.Show();
+        }
+
+        private void buttonReports_Click(object sender, EventArgs e)
+        {
+            ReportsForm reportsForm = new ReportsForm();
+            reportsForm.TopLevel = false;
+            reportsForm.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(reportsForm);
+            reportsForm.BringToFront();
+            reportsForm.Show();
         }
     }
 }

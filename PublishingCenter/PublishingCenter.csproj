@@ -35,8 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>..\packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
@@ -46,6 +46,9 @@
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -85,6 +88,9 @@
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.Collections.Immutable, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.8.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -108,6 +114,9 @@
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.8.0.0\lib\net462\System.Reflection.Metadata.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
@@ -146,6 +155,12 @@
     <Compile Include="Main\Authors\AuthorCardForm.Designer.cs">
       <DependentUpon>AuthorCardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\Authors\AuthorsBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Authors\AuthorsBookForm.Designer.cs">
+      <DependentUpon>AuthorsBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\Authors\AuthorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +169,18 @@
     </Compile>
     <Compile Include="Classes\Connection.cs" />
     <Compile Include="Classes\Employee.cs" />
+    <Compile Include="Main\Books\BookCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Books\BookCardForm.Designer.cs">
+      <DependentUpon>BookCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Books\BooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Books\BooksForm.Designer.cs">
+      <DependentUpon>BooksForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\Contracts\ContractCardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +204,36 @@
     </Compile>
     <Compile Include="Main\Customers\CustomersForm.Designer.cs">
       <DependentUpon>CustomersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Orders\OrderCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Orders\OrderCardForm.Designer.cs">
+      <DependentUpon>OrderCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Orders\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Orders\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\reports\ReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\reports\ReportsForm.Designer.cs">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Settings\EmployeeCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Settings\EmployeeCardForm.Designer.cs">
+      <DependentUpon>EmployeeCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Settings\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Settings\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Start\ForgotPasswordForm.cs">
       <SubType>Form</SubType>
@@ -214,8 +271,17 @@
     <EmbeddedResource Include="Main\Authors\AuthorCardForm.resx">
       <DependentUpon>AuthorCardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main\Authors\AuthorsBookForm.resx">
+      <DependentUpon>AuthorsBookForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\Authors\AuthorsForm.resx">
       <DependentUpon>AuthorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Books\BookCardForm.resx">
+      <DependentUpon>BookCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Books\BooksForm.resx">
+      <DependentUpon>BooksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\Contracts\ContractCardForm.resx">
       <DependentUpon>ContractCardForm.cs</DependentUpon>
@@ -228,6 +294,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\Customers\CustomersForm.resx">
       <DependentUpon>CustomersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Orders\OrderCardForm.resx">
+      <DependentUpon>OrderCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Orders\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\reports\ReportsForm.resx">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Settings\EmployeeCardForm.resx">
+      <DependentUpon>EmployeeCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Settings\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Start\ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>

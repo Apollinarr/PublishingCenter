@@ -202,8 +202,8 @@
             this.dateTimePickerTerminationDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerTerminationDate.Name = "dateTimePickerTerminationDate";
             this.dateTimePickerTerminationDate.Size = new System.Drawing.Size(297, 36);
-            this.dateTimePickerTerminationDate.TabIndex = 23;
-            this.dateTimePickerTerminationDate.Value = new System.DateTime(2024, 5, 6, 0, 0, 0, 0);
+            this.dateTimePickerTerminationDate.TabIndex = 4;
+            this.dateTimePickerTerminationDate.Value = new System.DateTime(2024, 5, 14, 0, 0, 0, 0);
             // 
             // comboBoxAuthor
             // 
@@ -216,7 +216,7 @@
             this.comboBoxAuthor.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAuthor.Name = "comboBoxAuthor";
             this.comboBoxAuthor.Size = new System.Drawing.Size(297, 40);
-            this.comboBoxAuthor.TabIndex = 25;
+            this.comboBoxAuthor.TabIndex = 0;
             // 
             // dateTimePickerConclusionDate
             // 
@@ -229,8 +229,8 @@
             this.dateTimePickerConclusionDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerConclusionDate.Name = "dateTimePickerConclusionDate";
             this.dateTimePickerConclusionDate.Size = new System.Drawing.Size(297, 36);
-            this.dateTimePickerConclusionDate.TabIndex = 23;
-            this.dateTimePickerConclusionDate.Value = new System.DateTime(2024, 5, 6, 0, 0, 0, 0);
+            this.dateTimePickerConclusionDate.TabIndex = 1;
+            this.dateTimePickerConclusionDate.Value = new System.DateTime(2024, 5, 14, 0, 0, 0, 0);
             // 
             // comboBoxContractPeriod
             // 
@@ -249,7 +249,7 @@
             this.comboBoxContractPeriod.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxContractPeriod.Name = "comboBoxContractPeriod";
             this.comboBoxContractPeriod.Size = new System.Drawing.Size(297, 40);
-            this.comboBoxContractPeriod.TabIndex = 25;
+            this.comboBoxContractPeriod.TabIndex = 2;
             this.comboBoxContractPeriod.SelectedValueChanged += new System.EventHandler(this.comboBoxContractPeriod_SelectedValueChanged);
             // 
             // comboBoxStatus
@@ -267,7 +267,7 @@
             this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(297, 40);
-            this.comboBoxStatus.TabIndex = 25;
+            this.comboBoxStatus.TabIndex = 3;
             this.comboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.comboBoxStatus_SelectedIndexChanged);
             // 
             // labelUpdate
@@ -290,7 +290,7 @@
             this.textBoxUpdate.MaxLength = 1;
             this.textBoxUpdate.Name = "textBoxUpdate";
             this.textBoxUpdate.Size = new System.Drawing.Size(297, 32);
-            this.textBoxUpdate.TabIndex = 26;
+            this.textBoxUpdate.TabIndex = 5;
             this.textBoxUpdate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUpdate_KeyPress);
             // 
             // ContractCardForm
@@ -316,6 +316,7 @@
             this.Controls.Add(this.labelConclusionDate);
             this.Controls.Add(this.labelAuthor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ContractCardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

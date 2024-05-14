@@ -41,7 +41,14 @@
             this.ColumnAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnContactPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBoxUpdate = new System.Windows.Forms.PictureBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.labelAttribute = new System.Windows.Forms.Label();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.comboBoxSearch = new System.Windows.Forms.ComboBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUpdate)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAdd
@@ -51,10 +58,10 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(930, 11);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAdd.Location = new System.Drawing.Point(1352, 14);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(170, 35);
+            this.buttonAdd.Size = new System.Drawing.Size(227, 43);
             this.buttonAdd.TabIndex = 6;
             this.buttonAdd.Text = "Добавить автора";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -62,6 +69,8 @@
             // 
             // dataGridViewCustomers
             // 
+            this.dataGridViewCustomers.AllowUserToResizeColumns = false;
+            this.dataGridViewCustomers.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dataGridViewCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
@@ -75,7 +84,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewCustomers.ColumnHeadersHeight = 40;
-            this.dataGridViewCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dataGridViewCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
             this.ColumnName,
@@ -91,13 +99,14 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewCustomers.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewCustomers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewCustomers.Location = new System.Drawing.Point(9, 10);
-            this.dataGridViewCustomers.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewCustomers.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewCustomers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewCustomers.Name = "dataGridViewCustomers";
             this.dataGridViewCustomers.RowHeadersVisible = false;
             this.dataGridViewCustomers.RowHeadersWidth = 51;
+            this.dataGridViewCustomers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewCustomers.RowTemplate.Height = 24;
-            this.dataGridViewCustomers.Size = new System.Drawing.Size(797, 421);
+            this.dataGridViewCustomers.Size = new System.Drawing.Size(1174, 518);
             this.dataGridViewCustomers.TabIndex = 5;
             this.dataGridViewCustomers.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridViewCustomers.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -110,7 +119,7 @@
             this.dataGridViewCustomers.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewCustomers.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dataGridViewCustomers.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewCustomers.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridViewCustomers.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewCustomers.ThemeStyle.HeaderStyle.Height = 40;
             this.dataGridViewCustomers.ThemeStyle.ReadOnly = false;
             this.dataGridViewCustomers.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -173,20 +182,109 @@
             this.ColumnContactPerson.Name = "ColumnContactPerson";
             this.ColumnContactPerson.Width = 200;
             // 
+            // pictureBoxUpdate
+            // 
+            this.pictureBoxUpdate.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUpdate.Image")));
+            this.pictureBoxUpdate.Location = new System.Drawing.Point(1193, 12);
+            this.pictureBoxUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxUpdate.Name = "pictureBoxUpdate";
+            this.pictureBoxUpdate.Size = new System.Drawing.Size(43, 39);
+            this.pictureBoxUpdate.TabIndex = 7;
+            this.pictureBoxUpdate.TabStop = false;
+            this.pictureBoxUpdate.Click += new System.EventHandler(this.pictureBoxUpdate_Click);
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSearch.Font = new System.Drawing.Font("Nirmala UI", 18F);
+            this.textBoxSearch.Location = new System.Drawing.Point(1251, 233);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxSearch.MaxLength = 50;
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(323, 32);
+            this.textBoxSearch.TabIndex = 24;
+            // 
+            // labelAttribute
+            // 
+            this.labelAttribute.AutoSize = true;
+            this.labelAttribute.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAttribute.ForeColor = System.Drawing.Color.MediumPurple;
+            this.labelAttribute.Location = new System.Drawing.Point(1245, 202);
+            this.labelAttribute.Name = "labelAttribute";
+            this.labelAttribute.Size = new System.Drawing.Size(91, 23);
+            this.labelAttribute.TabIndex = 22;
+            this.labelAttribute.Text = "Атрибут";
+            // 
+            // labelSearch
+            // 
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSearch.ForeColor = System.Drawing.Color.MediumPurple;
+            this.labelSearch.Location = new System.Drawing.Point(1245, 103);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(68, 23);
+            this.labelSearch.TabIndex = 23;
+            this.labelSearch.Text = "Поиск";
+            // 
+            // comboBoxSearch
+            // 
+            this.comboBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.comboBoxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxSearch.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSearch.FormattingEnabled = true;
+            this.comboBoxSearch.Items.AddRange(new object[] {
+            "Название",
+            "Адрес",
+            "Телефон",
+            "Обращаться к"});
+            this.comboBoxSearch.Location = new System.Drawing.Point(1251, 134);
+            this.comboBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxSearch.Name = "comboBoxSearch";
+            this.comboBoxSearch.Size = new System.Drawing.Size(321, 33);
+            this.comboBoxSearch.TabIndex = 21;
+            this.comboBoxSearch.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearch_SelectedIndexChanged);
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.BackColor = System.Drawing.Color.MediumPurple;
+            this.buttonSearch.FlatAppearance.BorderSize = 0;
+            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearch.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
+            this.buttonSearch.ForeColor = System.Drawing.Color.White;
+            this.buttonSearch.Location = new System.Drawing.Point(1347, 324);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(227, 43);
+            this.buttonSearch.TabIndex = 20;
+            this.buttonSearch.Text = "Поиск";
+            this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
             // CustomersForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1107, 462);
+            this.ClientSize = new System.Drawing.Size(1600, 569);
+            this.Controls.Add(this.textBoxSearch);
+            this.Controls.Add(this.labelAttribute);
+            this.Controls.Add(this.labelSearch);
+            this.Controls.Add(this.comboBoxSearch);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.pictureBoxUpdate);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dataGridViewCustomers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomersForm";
             this.Text = "CustomersForm";
             this.Load += new System.EventHandler(this.CustomersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUpdate)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -199,5 +297,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnContactPerson;
+        private System.Windows.Forms.PictureBox pictureBoxUpdate;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Label labelAttribute;
+        private System.Windows.Forms.Label labelSearch;
+        private System.Windows.Forms.ComboBox comboBoxSearch;
+        private System.Windows.Forms.Button buttonSearch;
     }
 }

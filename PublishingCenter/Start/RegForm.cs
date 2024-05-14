@@ -209,5 +209,13 @@ namespace PublishingCenter
 
             return true;
         }
+
+        private void textBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -19,11 +19,21 @@ namespace PublishingCenter.Main.Contracts
     {
         private MySqlConnection connection;
         private int ID = -1;
-        public ContractCardForm(bool isNew, string id = "-1")
+        public ContractCardForm(bool isNew, bool isReadOnly, string id = "-1")
         {
             InitializeComponent();
             connection = new Connection().GetConnectionString();
 
+            if (isReadOnly)
+            {
+                comboBoxAuthor.Enabled = false;
+                comboBoxAuthor.Enabled = false;
+                dateTimePickerConclusionDate.Enabled = false;
+                comboBoxContractPeriod.Enabled = false;
+                comboBoxContractPeriod.Enabled = false;
+                comboBoxStatus.Enabled = false;
+                dateTimePickerTerminationDate.Enabled = false;
+            }
             if (isNew)
             {
                 buttonAdd.Visible = true;
@@ -46,15 +56,25 @@ namespace PublishingCenter.Main.Contracts
             else
             {
                 ID = Convert.ToInt32(id);
-                buttonAdd.Visible = false;
-                buttonAdd.Enabled = false;
-                buttonDelete.Visible = true;
-                buttonDelete.Enabled = true;
-                buttonUpdate.Visible = true;
+                if (isReadOnly)
+                {
+                    buttonAdd.Visible = false;
+                    buttonDelete.Visible = false;
+                    buttonUpdate.Visible = false;
+                }
+                else
+                {
+                    buttonAdd.Visible = false;
+                    buttonAdd.Enabled = false;
+                    buttonDelete.Visible = true;
+                    buttonDelete.Enabled = true;
+                    buttonUpdate.Visible = true;
 
-                dateTimePickerConclusionDate.Enabled = false;
-                comboBoxContractPeriod.Enabled = false;
-                dateTimePickerTerminationDate.Enabled = false;
+                    dateTimePickerConclusionDate.Enabled = false;
+                    comboBoxContractPeriod.Enabled = false;
+                    dateTimePickerTerminationDate.Enabled = false;
+                }
+                
 
 
                 //SearchAuthorsWithoutContracts();

@@ -1,6 +1,6 @@
-﻿namespace PublishingCenter.Main.Contracts
+﻿namespace PublishingCenter.Main.Orders
 {
-    partial class ContractsForm
+    partial class OrderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,15 +34,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContractsForm));
-            this.dataGridViewContracts = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ColumnId = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.ColumnAuthor = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.ColumnConclusionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnContractPeriod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTerminationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.dataGridViewOrders = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ColumnId = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.ColumnCustomer = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.ColumnBook = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.ColumnOrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnOrderFulfillmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBoxUpdate = new System.Windows.Forms.PictureBox();
             this.dateTimePickerSearch = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
@@ -50,141 +50,9 @@
             this.labelSearch = new System.Windows.Forms.Label();
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUpdate)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridViewContracts
-            // 
-            this.dataGridViewContracts.AllowUserToResizeColumns = false;
-            this.dataGridViewContracts.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dataGridViewContracts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewContracts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
-            this.dataGridViewContracts.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewContracts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewContracts.ColumnHeadersHeight = 40;
-            this.dataGridViewContracts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnId,
-            this.ColumnAuthor,
-            this.ColumnConclusionDate,
-            this.ColumnContractPeriod,
-            this.ColumnStatus,
-            this.ColumnTerminationDate});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewContracts.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewContracts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewContracts.Location = new System.Drawing.Point(12, 12);
-            this.dataGridViewContracts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridViewContracts.Name = "dataGridViewContracts";
-            this.dataGridViewContracts.RowHeadersVisible = false;
-            this.dataGridViewContracts.RowHeadersWidth = 51;
-            this.dataGridViewContracts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridViewContracts.RowTemplate.Height = 24;
-            this.dataGridViewContracts.Size = new System.Drawing.Size(1063, 518);
-            this.dataGridViewContracts.TabIndex = 1;
-            this.dataGridViewContracts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridViewContracts.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dataGridViewContracts.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dataGridViewContracts.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dataGridViewContracts.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dataGridViewContracts.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewContracts.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewContracts.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dataGridViewContracts.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridViewContracts.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridViewContracts.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewContracts.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewContracts.ThemeStyle.HeaderStyle.Height = 40;
-            this.dataGridViewContracts.ThemeStyle.ReadOnly = false;
-            this.dataGridViewContracts.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridViewContracts.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridViewContracts.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridViewContracts.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGridViewContracts.ThemeStyle.RowsStyle.Height = 24;
-            this.dataGridViewContracts.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewContracts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGridViewContracts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewContracts_CellContentClick);
-            // 
-            // ColumnId
-            // 
-            this.ColumnId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnId.FillWeight = 19.25134F;
-            this.ColumnId.HeaderText = "id";
-            this.ColumnId.MinimumWidth = 6;
-            this.ColumnId.Name = "ColumnId";
-            this.ColumnId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumnId.Width = 63;
-            // 
-            // ColumnAuthor
-            // 
-            this.ColumnAuthor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.ColumnAuthor.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ColumnAuthor.FillWeight = 503.7433F;
-            this.ColumnAuthor.HeaderText = "Писатель";
-            this.ColumnAuthor.MinimumWidth = 6;
-            this.ColumnAuthor.Name = "ColumnAuthor";
-            this.ColumnAuthor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnAuthor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumnAuthor.Width = 200;
-            // 
-            // ColumnConclusionDate
-            // 
-            this.ColumnConclusionDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.ColumnConclusionDate.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ColumnConclusionDate.FillWeight = 19.25134F;
-            this.ColumnConclusionDate.HeaderText = "Дата заключения";
-            this.ColumnConclusionDate.MinimumWidth = 6;
-            this.ColumnConclusionDate.Name = "ColumnConclusionDate";
-            this.ColumnConclusionDate.Width = 200;
-            // 
-            // ColumnContractPeriod
-            // 
-            this.ColumnContractPeriod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnContractPeriod.FillWeight = 19.25134F;
-            this.ColumnContractPeriod.HeaderText = "Срок";
-            this.ColumnContractPeriod.MinimumWidth = 6;
-            this.ColumnContractPeriod.Name = "ColumnContractPeriod";
-            this.ColumnContractPeriod.Width = 200;
-            // 
-            // ColumnStatus
-            // 
-            this.ColumnStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnStatus.FillWeight = 19.25134F;
-            this.ColumnStatus.HeaderText = "Статус";
-            this.ColumnStatus.MinimumWidth = 6;
-            this.ColumnStatus.Name = "ColumnStatus";
-            this.ColumnStatus.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnStatus.Width = 200;
-            // 
-            // ColumnTerminationDate
-            // 
-            this.ColumnTerminationDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.ColumnTerminationDate.DefaultCellStyle = dataGridViewCellStyle5;
-            this.ColumnTerminationDate.FillWeight = 19.25134F;
-            this.ColumnTerminationDate.HeaderText = "Дата расторжения";
-            this.ColumnTerminationDate.MinimumWidth = 6;
-            this.ColumnTerminationDate.Name = "ColumnTerminationDate";
-            this.ColumnTerminationDate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnTerminationDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColumnTerminationDate.Width = 200;
             // 
             // buttonAdd
             // 
@@ -197,19 +65,153 @@
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(227, 43);
-            this.buttonAdd.TabIndex = 5;
+            this.buttonAdd.TabIndex = 7;
             this.buttonAdd.Text = "Добавить контракт";
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
+            // dataGridViewOrders
+            // 
+            this.dataGridViewOrders.AllowUserToResizeColumns = false;
+            this.dataGridViewOrders.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridViewOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
+            this.dataGridViewOrders.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewOrders.ColumnHeadersHeight = 40;
+            this.dataGridViewOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnId,
+            this.ColumnCustomer,
+            this.ColumnBook,
+            this.ColumnOrderDate,
+            this.ColumnOrderFulfillmentDate,
+            this.ColumnQuantity});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewOrders.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewOrders.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewOrders.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewOrders.Name = "dataGridViewOrders";
+            this.dataGridViewOrders.RowHeadersVisible = false;
+            this.dataGridViewOrders.RowHeadersWidth = 51;
+            this.dataGridViewOrders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridViewOrders.RowTemplate.Height = 24;
+            this.dataGridViewOrders.Size = new System.Drawing.Size(1089, 518);
+            this.dataGridViewOrders.TabIndex = 6;
+            this.dataGridViewOrders.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewOrders.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridViewOrders.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridViewOrders.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridViewOrders.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridViewOrders.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewOrders.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewOrders.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGridViewOrders.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewOrders.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridViewOrders.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridViewOrders.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewOrders.ThemeStyle.HeaderStyle.Height = 40;
+            this.dataGridViewOrders.ThemeStyle.ReadOnly = false;
+            this.dataGridViewOrders.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewOrders.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewOrders.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridViewOrders.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridViewOrders.ThemeStyle.RowsStyle.Height = 24;
+            this.dataGridViewOrders.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewOrders.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridViewOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrders_CellContentClick);
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnId.FillWeight = 19.25134F;
+            this.ColumnId.HeaderText = "id";
+            this.ColumnId.MinimumWidth = 6;
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColumnId.Width = 63;
+            // 
+            // ColumnCustomer
+            // 
+            this.ColumnCustomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.ColumnCustomer.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ColumnCustomer.FillWeight = 503.7433F;
+            this.ColumnCustomer.HeaderText = "Заказчик";
+            this.ColumnCustomer.MinimumWidth = 6;
+            this.ColumnCustomer.Name = "ColumnCustomer";
+            this.ColumnCustomer.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnCustomer.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColumnCustomer.Width = 200;
+            // 
+            // ColumnBook
+            // 
+            this.ColumnBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.ColumnBook.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ColumnBook.FillWeight = 19.25134F;
+            this.ColumnBook.HeaderText = "Книга";
+            this.ColumnBook.MinimumWidth = 6;
+            this.ColumnBook.Name = "ColumnBook";
+            this.ColumnBook.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnBook.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColumnBook.Width = 200;
+            // 
+            // ColumnOrderDate
+            // 
+            this.ColumnOrderDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnOrderDate.FillWeight = 19.25134F;
+            this.ColumnOrderDate.HeaderText = "Дата заказа";
+            this.ColumnOrderDate.MinimumWidth = 6;
+            this.ColumnOrderDate.Name = "ColumnOrderDate";
+            this.ColumnOrderDate.Width = 200;
+            // 
+            // ColumnOrderFulfillmentDate
+            // 
+            this.ColumnOrderFulfillmentDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnOrderFulfillmentDate.FillWeight = 19.25134F;
+            this.ColumnOrderFulfillmentDate.HeaderText = "Дата выполнения заказа";
+            this.ColumnOrderFulfillmentDate.MinimumWidth = 6;
+            this.ColumnOrderFulfillmentDate.Name = "ColumnOrderFulfillmentDate";
+            this.ColumnOrderFulfillmentDate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnOrderFulfillmentDate.Width = 200;
+            // 
+            // ColumnQuantity
+            // 
+            this.ColumnQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.ColumnQuantity.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ColumnQuantity.FillWeight = 19.25134F;
+            this.ColumnQuantity.HeaderText = "Количество экземпляров";
+            this.ColumnQuantity.MinimumWidth = 6;
+            this.ColumnQuantity.Name = "ColumnQuantity";
+            this.ColumnQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnQuantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnQuantity.Width = 200;
+            // 
             // pictureBoxUpdate
             // 
             this.pictureBoxUpdate.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUpdate.Image")));
-            this.pictureBoxUpdate.Location = new System.Drawing.Point(1081, 12);
+            this.pictureBoxUpdate.Location = new System.Drawing.Point(1108, 12);
             this.pictureBoxUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxUpdate.Name = "pictureBoxUpdate";
             this.pictureBoxUpdate.Size = new System.Drawing.Size(43, 39);
-            this.pictureBoxUpdate.TabIndex = 6;
+            this.pictureBoxUpdate.TabIndex = 8;
             this.pictureBoxUpdate.TabStop = false;
             this.pictureBoxUpdate.Click += new System.EventHandler(this.pictureBoxUpdate_Click);
             // 
@@ -219,7 +221,7 @@
             this.dateTimePickerSearch.FillColor = System.Drawing.Color.MediumPurple;
             this.dateTimePickerSearch.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.dateTimePickerSearch.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimePickerSearch.Location = new System.Drawing.Point(1141, 223);
+            this.dateTimePickerSearch.Location = new System.Drawing.Point(1141, 239);
             this.dateTimePickerSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerSearch.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerSearch.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -233,7 +235,7 @@
             this.textBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearch.Font = new System.Drawing.Font("Nirmala UI", 18F);
-            this.textBoxSearch.Location = new System.Drawing.Point(1141, 223);
+            this.textBoxSearch.Location = new System.Drawing.Point(1141, 239);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSearch.MaxLength = 50;
             this.textBoxSearch.Name = "textBoxSearch";
@@ -245,7 +247,7 @@
             this.labelAttribute.AutoSize = true;
             this.labelAttribute.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAttribute.ForeColor = System.Drawing.Color.MediumPurple;
-            this.labelAttribute.Location = new System.Drawing.Point(1136, 192);
+            this.labelAttribute.Location = new System.Drawing.Point(1136, 208);
             this.labelAttribute.Name = "labelAttribute";
             this.labelAttribute.Size = new System.Drawing.Size(91, 23);
             this.labelAttribute.TabIndex = 22;
@@ -256,7 +258,7 @@
             this.labelSearch.AutoSize = true;
             this.labelSearch.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelSearch.ForeColor = System.Drawing.Color.MediumPurple;
-            this.labelSearch.Location = new System.Drawing.Point(1136, 94);
+            this.labelSearch.Location = new System.Drawing.Point(1136, 110);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(68, 23);
             this.labelSearch.TabIndex = 23;
@@ -270,12 +272,11 @@
             this.comboBoxSearch.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSearch.FormattingEnabled = true;
             this.comboBoxSearch.Items.AddRange(new object[] {
-            "Писатель",
-            "Дата заключения",
-            "Срок",
-            "Статус",
-            "Дата расторжения"});
-            this.comboBoxSearch.Location = new System.Drawing.Point(1141, 124);
+            "Заказчик",
+            "Книга",
+            "Дата заказа",
+            "Дата выполнения заказа"});
+            this.comboBoxSearch.Location = new System.Drawing.Point(1141, 140);
             this.comboBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSearch.Name = "comboBoxSearch";
             this.comboBoxSearch.Size = new System.Drawing.Size(321, 33);
@@ -289,7 +290,7 @@
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearch.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonSearch.ForeColor = System.Drawing.Color.White;
-            this.buttonSearch.Location = new System.Drawing.Point(1237, 314);
+            this.buttonSearch.Location = new System.Drawing.Point(1237, 330);
             this.buttonSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(227, 43);
@@ -298,7 +299,7 @@
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // ContractsForm
+            // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -311,14 +312,14 @@
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.pictureBoxUpdate);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.dataGridViewContracts);
+            this.Controls.Add(this.dataGridViewOrders);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "ContractsForm";
-            this.Text = "ContractsForm";
-            this.Load += new System.EventHandler(this.ContractsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).EndInit();
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "OrderForm";
+            this.Text = "1107; 462";
+            this.Load += new System.EventHandler(this.OrderForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUpdate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -327,14 +328,14 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2DataGridView dataGridViewContracts;
         private System.Windows.Forms.Button buttonAdd;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridViewOrders;
         private System.Windows.Forms.DataGridViewLinkColumn ColumnId;
-        private System.Windows.Forms.DataGridViewLinkColumn ColumnAuthor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnConclusionDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnContractPeriod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnStatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTerminationDate;
+        private System.Windows.Forms.DataGridViewLinkColumn ColumnCustomer;
+        private System.Windows.Forms.DataGridViewLinkColumn ColumnBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnOrderDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnOrderFulfillmentDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
         private System.Windows.Forms.PictureBox pictureBoxUpdate;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerSearch;
         private System.Windows.Forms.TextBox textBoxSearch;
