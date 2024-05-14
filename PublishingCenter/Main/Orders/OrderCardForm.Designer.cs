@@ -110,7 +110,7 @@
             this.dateTimePickerOrderDate.Name = "dateTimePickerOrderDate";
             this.dateTimePickerOrderDate.Size = new System.Drawing.Size(297, 36);
             this.dateTimePickerOrderDate.TabIndex = 29;
-            this.dateTimePickerOrderDate.Value = new System.DateTime(2024, 5, 13, 0, 0, 0, 0);
+            this.dateTimePickerOrderDate.Value = new System.DateTime(2024, 5, 14, 0, 0, 0, 0);
             // 
             // dateTimePickerOrderFulfillmentDate
             // 
@@ -124,7 +124,7 @@
             this.dateTimePickerOrderFulfillmentDate.Name = "dateTimePickerOrderFulfillmentDate";
             this.dateTimePickerOrderFulfillmentDate.Size = new System.Drawing.Size(297, 36);
             this.dateTimePickerOrderFulfillmentDate.TabIndex = 32;
-            this.dateTimePickerOrderFulfillmentDate.Value = new System.DateTime(2024, 5, 13, 0, 0, 0, 0);
+            this.dateTimePickerOrderFulfillmentDate.Value = new System.DateTime(2024, 5, 14, 0, 0, 0, 0);
             // 
             // pictureBox1
             // 

@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using PublishingCenter.Main.Authors;
 using ServiceStack;
 using System;
 using System.Collections.Generic;
@@ -44,7 +45,7 @@ namespace PublishingCenter
                 adapter.Fill(dataTable);
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    dataGridViewAuthors.Rows.Add(row.ItemArray[0], row.ItemArray[2], row.ItemArray[1], row.ItemArray[3], ((DateTime)row.ItemArray[4]).ToShortDateString());
+                    dataGridViewAuthors.Rows.Add(row.ItemArray[0], row.ItemArray[2], row.ItemArray[1], row.ItemArray[3], ((DateTime)row.ItemArray[4]).ToShortDateString(), "Смотреть");
                 }
 
 
@@ -85,6 +86,26 @@ namespace PublishingCenter
                     AuthorCardForm authorCardForm = new AuthorCardForm(false, id);
                     authorCardForm.ShowDialog();
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+
+                    UpdateTable();
+                }
+            }
+            if (e.ColumnIndex == 5 && e.RowIndex >= 0)
+            {
+                try
+                {
+                    string id = dataGridViewAuthors.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    AuthorsBookForm authorsBookForm = new AuthorsBookForm(id);
+                    authorsBookForm.ShowDialog();
                 }
                 catch (Exception ex)
                 {

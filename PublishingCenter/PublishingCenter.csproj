@@ -146,6 +146,12 @@
     <Compile Include="Main\Authors\AuthorCardForm.Designer.cs">
       <DependentUpon>AuthorCardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\Authors\AuthorsBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Authors\AuthorsBookForm.Designer.cs">
+      <DependentUpon>AuthorsBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\Authors\AuthorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main\Authors\AuthorCardForm.resx">
       <DependentUpon>AuthorCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Authors\AuthorsBookForm.resx">
+      <DependentUpon>AuthorsBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\Authors\AuthorsForm.resx">
       <DependentUpon>AuthorsForm.cs</DependentUpon>

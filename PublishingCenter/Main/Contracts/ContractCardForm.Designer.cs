@@ -106,7 +106,7 @@
             this.buttonClose.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonClose.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonClose.Location = new System.Drawing.Point(1124, -2);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(30, 32);
             this.buttonClose.TabIndex = 18;
@@ -122,7 +122,7 @@
             this.buttonUpdate.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
             this.buttonUpdate.Location = new System.Drawing.Point(40, 416);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(144, 49);
             this.buttonUpdate.TabIndex = 19;
@@ -138,7 +138,7 @@
             this.buttonDelete.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
             this.buttonDelete.Location = new System.Drawing.Point(263, 416);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(144, 49);
             this.buttonDelete.TabIndex = 20;
@@ -154,7 +154,7 @@
             this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
             this.buttonAdd.Location = new System.Drawing.Point(40, 416);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(144, 49);
             this.buttonAdd.TabIndex = 21;
@@ -185,7 +185,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(40, 44);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(256, 256);
             this.pictureBox1.TabIndex = 22;
@@ -203,7 +203,7 @@
             this.dateTimePickerTerminationDate.Name = "dateTimePickerTerminationDate";
             this.dateTimePickerTerminationDate.Size = new System.Drawing.Size(297, 36);
             this.dateTimePickerTerminationDate.TabIndex = 4;
-            this.dateTimePickerTerminationDate.Value = new System.DateTime(2024, 5, 6, 0, 0, 0, 0);
+            this.dateTimePickerTerminationDate.Value = new System.DateTime(2024, 5, 14, 0, 0, 0, 0);
             // 
             // comboBoxAuthor
             // 
@@ -213,7 +213,7 @@
             this.comboBoxAuthor.Font = new System.Drawing.Font("Nirmala UI", 18F);
             this.comboBoxAuthor.FormattingEnabled = true;
             this.comboBoxAuthor.Location = new System.Drawing.Point(420, 76);
-            this.comboBoxAuthor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxAuthor.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAuthor.Name = "comboBoxAuthor";
             this.comboBoxAuthor.Size = new System.Drawing.Size(297, 40);
             this.comboBoxAuthor.TabIndex = 0;
@@ -230,7 +230,7 @@
             this.dateTimePickerConclusionDate.Name = "dateTimePickerConclusionDate";
             this.dateTimePickerConclusionDate.Size = new System.Drawing.Size(297, 36);
             this.dateTimePickerConclusionDate.TabIndex = 1;
-            this.dateTimePickerConclusionDate.Value = new System.DateTime(2024, 5, 6, 0, 0, 0, 0);
+            this.dateTimePickerConclusionDate.Value = new System.DateTime(2024, 5, 14, 0, 0, 0, 0);
             // 
             // comboBoxContractPeriod
             // 
@@ -246,7 +246,7 @@
             "4",
             "5"});
             this.comboBoxContractPeriod.Location = new System.Drawing.Point(420, 278);
-            this.comboBoxContractPeriod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxContractPeriod.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxContractPeriod.Name = "comboBoxContractPeriod";
             this.comboBoxContractPeriod.Size = new System.Drawing.Size(297, 40);
             this.comboBoxContractPeriod.TabIndex = 2;
@@ -264,7 +264,7 @@
             "Продлен",
             "Расторжен"});
             this.comboBoxStatus.Location = new System.Drawing.Point(780, 76);
-            this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(297, 40);
             this.comboBoxStatus.TabIndex = 3;
@@ -317,7 +317,7 @@
             this.Controls.Add(this.labelAuthor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ContractCardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContractCardForm";

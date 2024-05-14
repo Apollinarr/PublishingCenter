@@ -78,12 +78,13 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewAuthors.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewAuthors.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewAuthors.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewAuthors.Location = new System.Drawing.Point(9, 10);
+            this.dataGridViewAuthors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewAuthors.Name = "dataGridViewAuthors";
             this.dataGridViewAuthors.RowHeadersVisible = false;
             this.dataGridViewAuthors.RowHeadersWidth = 51;
             this.dataGridViewAuthors.RowTemplate.Height = 24;
-            this.dataGridViewAuthors.Size = new System.Drawing.Size(1063, 518);
+            this.dataGridViewAuthors.Size = new System.Drawing.Size(797, 421);
             this.dataGridViewAuthors.TabIndex = 0;
             this.dataGridViewAuthors.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridViewAuthors.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -115,9 +116,10 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(1238, 12);
+            this.buttonAdd.Location = new System.Drawing.Point(928, 10);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(226, 43);
+            this.buttonAdd.Size = new System.Drawing.Size(170, 35);
             this.buttonAdd.TabIndex = 4;
             this.buttonAdd.Text = "Добавить автора";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -183,18 +185,20 @@
             this.ColumnBooks.HeaderText = "Книги";
             this.ColumnBooks.MinimumWidth = 6;
             this.ColumnBooks.Name = "ColumnBooks";
+            this.ColumnBooks.Text = "Смотреть";
             this.ColumnBooks.Width = 200;
             // 
             // AuthorsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1476, 569);
+            this.ClientSize = new System.Drawing.Size(1107, 462);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dataGridViewAuthors);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AuthorsForm";
             this.Text = "AuthorsForm";
             this.Load += new System.EventHandler(this.AuthorsForm_Load);
