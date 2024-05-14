@@ -107,7 +107,7 @@ namespace PublishingCenter.Main.Authors
                 try
                 {
                     string id = dataGridViewBooks.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    BookCardForm bookCardForm = new BookCardForm(false, id);
+                    BookCardForm bookCardForm = new BookCardForm(false, true, id);
                     bookCardForm.ShowDialog();
 
                 }

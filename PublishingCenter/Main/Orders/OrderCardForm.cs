@@ -9,6 +9,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ServiceStack.Script.Lisp;
 
 namespace PublishingCenter.Main.Orders
 {
@@ -16,11 +17,19 @@ namespace PublishingCenter.Main.Orders
     {
         private MySqlConnection connection;
         private int ID = -1;
-        public OrderCardForm(bool isNew, string id = "-1")
+        public OrderCardForm(bool isNew, bool isReadOnly, string id = "-1")
         {
             InitializeComponent();
             connection = new Connection().GetConnectionString();
 
+            if (isReadOnly)
+            {
+                comboBoxCustomer.Enabled = false;
+                comboBoxBook.Enabled = false;
+                dateTimePickerOrderDate.Enabled = false;
+                dateTimePickerOrderFulfillmentDate.Enabled = false;
+                textBoxQuantity.Enabled = false;
+            }
             if (isNew)
             {
                 buttonAdd.Visible = true;
@@ -40,13 +49,21 @@ namespace PublishingCenter.Main.Orders
             else
             {
                 ID = Convert.ToInt32(id);
-                buttonAdd.Visible = false;
-                buttonAdd.Enabled = false;
-                buttonDelete.Visible = true;
-                buttonDelete.Enabled = true;
-
-                SearchCustomers();
-                SearchBooks();
+                if (isReadOnly)
+                {
+                    buttonAdd.Visible = false;
+                    buttonDelete.Visible = false;
+                    buttonUpdate.Visible = false;
+                }
+                else
+                {
+                    buttonAdd.Visible = false;
+                    buttonAdd.Enabled = false;
+                    buttonDelete.Visible = true;
+                    buttonDelete.Enabled = true;
+                    SearchCustomers();
+                    SearchBooks();
+                }
 
                 try
                 {

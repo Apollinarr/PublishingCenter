@@ -69,7 +69,7 @@ namespace PublishingCenter.Main.Customers
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            CustomerCardForm customerCardForm = new CustomerCardForm(true);
+            CustomerCardForm customerCardForm = new CustomerCardForm(true, false);
             customerCardForm.ShowDialog();
 
             UpdateTable();
@@ -82,7 +82,7 @@ namespace PublishingCenter.Main.Customers
                 try
                 {
                     string id = dataGridViewCustomers.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    CustomerCardForm customerCardForm = new CustomerCardForm(false, id);
+                    CustomerCardForm customerCardForm = new CustomerCardForm(false, false, id);
                     customerCardForm.ShowDialog();
 
                 }
