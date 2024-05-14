@@ -68,6 +68,7 @@
             this.textBoxMail.Name = "textBoxMail";
             this.textBoxMail.Size = new System.Drawing.Size(350, 40);
             this.textBoxMail.TabIndex = 3;
+            this.textBoxMail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMail_KeyPress);
             // 
             // pictureBoxMail
             // 
@@ -91,6 +92,7 @@
             this.textBoxCode.Name = "textBoxCode";
             this.textBoxCode.Size = new System.Drawing.Size(350, 40);
             this.textBoxCode.TabIndex = 3;
+            this.textBoxCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCode_KeyPress);
             // 
             // labelCode
             // 
@@ -167,6 +169,7 @@
             this.textBoxConfirmePassword.PasswordChar = '•';
             this.textBoxConfirmePassword.Size = new System.Drawing.Size(190, 35);
             this.textBoxConfirmePassword.TabIndex = 26;
+            this.textBoxConfirmePassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxConfirmePassword_KeyPress);
             // 
             // labelPassword
             // 
@@ -191,6 +194,7 @@
             this.textBoxPassword.PasswordChar = '•';
             this.textBoxPassword.Size = new System.Drawing.Size(190, 35);
             this.textBoxPassword.TabIndex = 25;
+            this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPassword_KeyPress);
             // 
             // labelBack
             // 

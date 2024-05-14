@@ -148,5 +148,21 @@ namespace PublishingCenter
                 textBoxPassword.PasswordChar = '•';
             }
         }
+
+        private void textBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

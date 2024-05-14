@@ -19,9 +19,9 @@ namespace PublishingCenter.Main.Customers
             InitializeComponent();
             connection = new Connection().GetConnectionString();
 
-            dataGridViewCustomers.Width = Width;
+            //dataGridViewCustomers.Width = Width;
             buttonAdd.Location = new System.Drawing.Point(dataGridViewCustomers.Width + 130, dataGridViewCustomers.Location.Y);
-            pictureBoxUpdate.Location = new System.Drawing.Point(dataGridViewCustomers.Width, dataGridViewCustomers.Location.Y);
+            pictureBoxUpdate.Location = new System.Drawing.Point(dataGridViewCustomers.Width + 15, dataGridViewCustomers.Location.Y);
             labelSearch.Location = new System.Drawing.Point(dataGridViewCustomers.Width + 70, dataGridViewCustomers.Location.Y + 90);
             comboBoxSearch.Location = new System.Drawing.Point(dataGridViewCustomers.Width + 70, dataGridViewCustomers.Location.Y + 120);
             labelAttribute.Location = new System.Drawing.Point(dataGridViewCustomers.Width + 70, dataGridViewCustomers.Location.Y + 220);

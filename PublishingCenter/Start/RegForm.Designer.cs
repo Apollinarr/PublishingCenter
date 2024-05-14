@@ -211,6 +211,7 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(383, 28);
             this.textBoxLogin.TabIndex = 4;
+            this.textBoxLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLogin_KeyPress);
             // 
             // textBoxConfirmePassword
             // 
