@@ -37,6 +37,23 @@ namespace PublishingCenter
             //{
             //    buttonUser.Text = "Гость";
             //}
+
+            if (Employee.Position == 2)
+            {
+                buttonOrders.Visible = false;
+                buttonCustomers.Visible = false;
+                buttonSettings.Visible = false;
+                buttonReports.Location = new Point(buttonContracts.Location.X + buttonContracts.Width, 0);
+            }
+            if (Employee.Position == 3)
+            {
+                buttonAuthors.Visible = false;
+                buttonContracts.Visible = false;
+                buttonSettings.Visible = false;
+                buttonOrders.Location = new Point(buttonBooks.Width, 0);
+                buttonCustomers.Location = new Point(buttonOrders.Location.X + buttonBooks.Width, 0);
+                buttonReports.Location = new Point(buttonCustomers.Location.X + buttonCustomers.Width, 0);
+            }
         }
 
         bool menuExpand = false;
