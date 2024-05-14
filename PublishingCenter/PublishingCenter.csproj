@@ -208,6 +208,18 @@
     <Compile Include="Main\Orders\OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\Settings\EmployeeCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Settings\EmployeeCardForm.Designer.cs">
+      <DependentUpon>EmployeeCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Settings\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Settings\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Start\ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +285,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\Orders\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Settings\EmployeeCardForm.resx">
+      <DependentUpon>EmployeeCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Settings\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Start\ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>

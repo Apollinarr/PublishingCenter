@@ -67,7 +67,7 @@
             this.panelHeader.Controls.Add(this.labelLogo);
             this.panelHeader.Controls.Add(this.pictureBoxLogo);
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(2);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(462, 47);
             this.panelHeader.TabIndex = 0;
@@ -88,7 +88,7 @@
             // 
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.Location = new System.Drawing.Point(9, 4);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(41, 41);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +122,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.MediumPurple;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(190, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,7 +137,7 @@
             this.buttonUser.ForeColor = System.Drawing.Color.White;
             this.buttonUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonUser.Location = new System.Drawing.Point(-23, -31);
-            this.buttonUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonUser.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUser.Name = "buttonUser";
             this.buttonUser.Size = new System.Drawing.Size(218, 108);
             this.buttonUser.TabIndex = 1;
@@ -163,7 +163,7 @@
             this.buttonChangeAccount.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonChangeAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonChangeAccount.Location = new System.Drawing.Point(-23, -41);
-            this.buttonChangeAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonChangeAccount.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChangeAccount.Name = "buttonChangeAccount";
             this.buttonChangeAccount.Size = new System.Drawing.Size(292, 108);
             this.buttonChangeAccount.TabIndex = 1;
@@ -207,7 +207,7 @@
             this.panelSections.Controls.Add(this.buttonAuthors);
             this.panelSections.Controls.Add(this.buttonBooks);
             this.panelSections.Location = new System.Drawing.Point(0, 47);
-            this.panelSections.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSections.Margin = new System.Windows.Forms.Padding(2);
             this.panelSections.Name = "panelSections";
             this.panelSections.Size = new System.Drawing.Size(892, 48);
             this.panelSections.TabIndex = 1;
@@ -227,11 +227,12 @@
             this.buttonSettings.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonSettings.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
             this.buttonSettings.Location = new System.Drawing.Point(765, 0);
-            this.buttonSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSettings.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Size = new System.Drawing.Size(128, 48);
             this.buttonSettings.TabIndex = 0;
-            this.buttonSettings.Text = "Настройки";
+            this.buttonSettings.Text = "Сотрудники";
+            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
             // buttonReports
             // 
@@ -248,7 +249,7 @@
             this.buttonReports.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonReports.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
             this.buttonReports.Location = new System.Drawing.Point(638, 0);
-            this.buttonReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonReports.Margin = new System.Windows.Forms.Padding(2);
             this.buttonReports.Name = "buttonReports";
             this.buttonReports.Size = new System.Drawing.Size(128, 48);
             this.buttonReports.TabIndex = 0;
@@ -268,8 +269,8 @@
             this.buttonCustomers.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCustomers.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonCustomers.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
-            this.buttonCustomers.Location = new System.Drawing.Point(518, 0);
-            this.buttonCustomers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCustomers.Location = new System.Drawing.Point(510, 0);
+            this.buttonCustomers.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCustomers.Name = "buttonCustomers";
             this.buttonCustomers.Size = new System.Drawing.Size(128, 48);
             this.buttonCustomers.TabIndex = 0;
@@ -291,7 +292,7 @@
             this.buttonContracts.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonContracts.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
             this.buttonContracts.Location = new System.Drawing.Point(255, 0);
-            this.buttonContracts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonContracts.Margin = new System.Windows.Forms.Padding(2);
             this.buttonContracts.Name = "buttonContracts";
             this.buttonContracts.Size = new System.Drawing.Size(128, 48);
             this.buttonContracts.TabIndex = 0;
@@ -313,7 +314,7 @@
             this.buttonOrders.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonOrders.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
             this.buttonOrders.Location = new System.Drawing.Point(382, 0);
-            this.buttonOrders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonOrders.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOrders.Name = "buttonOrders";
             this.buttonOrders.Size = new System.Drawing.Size(128, 48);
             this.buttonOrders.TabIndex = 0;
@@ -335,7 +336,7 @@
             this.buttonAuthors.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonAuthors.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
             this.buttonAuthors.Location = new System.Drawing.Point(128, 0);
-            this.buttonAuthors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAuthors.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAuthors.Name = "buttonAuthors";
             this.buttonAuthors.Size = new System.Drawing.Size(128, 48);
             this.buttonAuthors.TabIndex = 0;
@@ -357,7 +358,7 @@
             this.buttonBooks.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonBooks.HoverState.CustomBorderColor = System.Drawing.Color.MediumPurple;
             this.buttonBooks.Location = new System.Drawing.Point(0, 0);
-            this.buttonBooks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBooks.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBooks.Name = "buttonBooks";
             this.buttonBooks.Size = new System.Drawing.Size(128, 48);
             this.buttonBooks.TabIndex = 0;
@@ -368,7 +369,7 @@
             // 
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelContainer.Location = new System.Drawing.Point(0, 92);
-            this.panelContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(892, 396);
             this.panelContainer.TabIndex = 2;
@@ -389,7 +390,7 @@
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BookWise Publishing";
