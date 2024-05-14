@@ -154,7 +154,7 @@
             this.dateTimePickerBirth.Name = "dateTimePickerBirth";
             this.dateTimePickerBirth.Size = new System.Drawing.Size(297, 36);
             this.dateTimePickerBirth.TabIndex = 3;
-            this.dateTimePickerBirth.Value = new System.DateTime(2024, 5, 2, 20, 44, 14, 628);
+            this.dateTimePickerBirth.Value = new System.DateTime(2024, 5, 14, 0, 0, 0, 0);
             // 
             // labelDateOfBirthday
             // 

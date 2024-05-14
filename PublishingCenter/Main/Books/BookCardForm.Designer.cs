@@ -68,7 +68,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(40, 44);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(256, 256);
             this.pictureBox1.TabIndex = 20;
@@ -81,13 +81,13 @@
             this.dateTimePickerPublicationDate.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.dateTimePickerPublicationDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dateTimePickerPublicationDate.Location = new System.Drawing.Point(406, 275);
-            this.dateTimePickerPublicationDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerPublicationDate.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerPublicationDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerPublicationDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerPublicationDate.Name = "dateTimePickerPublicationDate";
             this.dateTimePickerPublicationDate.Size = new System.Drawing.Size(297, 32);
             this.dateTimePickerPublicationDate.TabIndex = 3;
-            this.dateTimePickerPublicationDate.Value = new System.DateTime(2024, 5, 7, 0, 0, 0, 0);
+            this.dateTimePickerPublicationDate.Value = new System.DateTime(2024, 5, 14, 0, 0, 0, 0);
             // 
             // buttonChange
             // 
@@ -97,7 +97,7 @@
             this.buttonChange.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonChange.ForeColor = System.Drawing.Color.White;
             this.buttonChange.Location = new System.Drawing.Point(44, 405);
-            this.buttonChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonChange.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChange.Name = "buttonChange";
             this.buttonChange.Size = new System.Drawing.Size(144, 49);
             this.buttonChange.TabIndex = 17;
@@ -113,7 +113,7 @@
             this.buttonDelete.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
             this.buttonDelete.Location = new System.Drawing.Point(305, 405);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(144, 49);
             this.buttonDelete.TabIndex = 18;
@@ -129,7 +129,7 @@
             this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
             this.buttonAdd.Location = new System.Drawing.Point(44, 405);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(144, 49);
             this.buttonAdd.TabIndex = 19;
@@ -167,7 +167,7 @@
             this.textBoxEditionQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEditionQuantity.Font = new System.Drawing.Font("Nirmala UI", 18F);
             this.textBoxEditionQuantity.Location = new System.Drawing.Point(406, 206);
-            this.textBoxEditionQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEditionQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEditionQuantity.MaxLength = 5;
             this.textBoxEditionQuantity.Name = "textBoxEditionQuantity";
             this.textBoxEditionQuantity.Size = new System.Drawing.Size(297, 32);
@@ -192,7 +192,7 @@
             this.textBoxTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTitle.Font = new System.Drawing.Font("Nirmala UI", 18F);
             this.textBoxTitle.Location = new System.Drawing.Point(406, 136);
-            this.textBoxTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTitle.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTitle.MaxLength = 50;
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(297, 32);
@@ -216,7 +216,7 @@
             this.textBoxBookCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxBookCode.Font = new System.Drawing.Font("Nirmala UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBookCode.Location = new System.Drawing.Point(406, 68);
-            this.textBoxBookCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBookCode.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBookCode.MaxLength = 15;
             this.textBoxBookCode.Name = "textBoxBookCode";
             this.textBoxBookCode.Size = new System.Drawing.Size(297, 32);
@@ -230,7 +230,7 @@
             this.buttonClose.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonClose.ForeColor = System.Drawing.Color.MediumPurple;
             this.buttonClose.Location = new System.Drawing.Point(1421, -2);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(30, 32);
             this.buttonClose.TabIndex = 21;
@@ -244,7 +244,7 @@
             this.textBoxCostPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCostPrice.Font = new System.Drawing.Font("Nirmala UI", 18F);
             this.textBoxCostPrice.Location = new System.Drawing.Point(743, 68);
-            this.textBoxCostPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCostPrice.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCostPrice.MaxLength = 50;
             this.textBoxCostPrice.Name = "textBoxCostPrice";
             this.textBoxCostPrice.Size = new System.Drawing.Size(297, 32);
@@ -269,7 +269,7 @@
             this.textBoxSellingPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSellingPrice.Font = new System.Drawing.Font("Nirmala UI", 18F);
             this.textBoxSellingPrice.Location = new System.Drawing.Point(743, 136);
-            this.textBoxSellingPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSellingPrice.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSellingPrice.MaxLength = 50;
             this.textBoxSellingPrice.Name = "textBoxSellingPrice";
             this.textBoxSellingPrice.Size = new System.Drawing.Size(297, 32);
@@ -294,7 +294,7 @@
             this.textBoxRoyalty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxRoyalty.Font = new System.Drawing.Font("Nirmala UI", 18F);
             this.textBoxRoyalty.Location = new System.Drawing.Point(743, 206);
-            this.textBoxRoyalty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxRoyalty.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRoyalty.MaxLength = 50;
             this.textBoxRoyalty.Name = "textBoxRoyalty";
             this.textBoxRoyalty.Size = new System.Drawing.Size(297, 32);
@@ -321,7 +321,7 @@
             this.comboBoxGenre.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxGenre.FormattingEnabled = true;
             this.comboBoxGenre.Location = new System.Drawing.Point(1121, 136);
-            this.comboBoxGenre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxGenre.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxGenre.Name = "comboBoxGenre";
             this.comboBoxGenre.Size = new System.Drawing.Size(297, 33);
             this.comboBoxGenre.TabIndex = 8;
@@ -334,7 +334,7 @@
             this.comboBoxAuthor.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxAuthor.FormattingEnabled = true;
             this.comboBoxAuthor.Location = new System.Drawing.Point(1121, 68);
-            this.comboBoxAuthor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxAuthor.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAuthor.Name = "comboBoxAuthor";
             this.comboBoxAuthor.Size = new System.Drawing.Size(297, 33);
             this.comboBoxAuthor.TabIndex = 7;
@@ -393,7 +393,7 @@
             this.Controls.Add(this.textBoxBookCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BookCardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BookCardForm";
