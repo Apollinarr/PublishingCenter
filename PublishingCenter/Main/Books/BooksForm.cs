@@ -33,6 +33,11 @@ namespace PublishingCenter.Main.Books
             textBoxSearch.Visible = false;
             dateTimePickerSearch.Visible = false;
             buttonSearch.Visible = false;
+
+            if (Employee.Position == 3)
+            {
+                buttonAdd.Visible = false;
+            }
         }
 
         private void BooksForm_Load(object sender, EventArgs e)

@@ -73,6 +73,13 @@ namespace PublishingCenter.Main.Books
                     SearchGenres();
                 }
 
+                if (Employee.Position == 3)
+                {
+                    buttonAdd.Visible = false;
+                    buttonDelete.Visible = false;
+                    buttonChange.Visible = false;
+                }
+
                 try
                 {
                     if (connection.State == ConnectionState.Closed)
