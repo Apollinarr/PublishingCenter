@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContractsForm));
             this.dataGridViewContracts = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ColumnId = new System.Windows.Forms.DataGridViewLinkColumn();
@@ -56,20 +56,21 @@
             // 
             // dataGridViewContracts
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            this.dataGridViewContracts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridViewContracts.AllowUserToResizeColumns = false;
+            this.dataGridViewContracts.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridViewContracts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewContracts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.dataGridViewContracts.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewContracts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewContracts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewContracts.ColumnHeadersHeight = 40;
-            this.dataGridViewContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dataGridViewContracts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
             this.ColumnAuthor,
@@ -77,22 +78,23 @@
             this.ColumnContractPeriod,
             this.ColumnStatus,
             this.ColumnTerminationDate});
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewContracts.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewContracts.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewContracts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewContracts.Location = new System.Drawing.Point(9, 10);
-            this.dataGridViewContracts.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewContracts.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewContracts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewContracts.Name = "dataGridViewContracts";
             this.dataGridViewContracts.RowHeadersVisible = false;
             this.dataGridViewContracts.RowHeadersWidth = 51;
+            this.dataGridViewContracts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewContracts.RowTemplate.Height = 24;
-            this.dataGridViewContracts.Size = new System.Drawing.Size(797, 421);
+            this.dataGridViewContracts.Size = new System.Drawing.Size(1063, 518);
             this.dataGridViewContracts.TabIndex = 1;
             this.dataGridViewContracts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridViewContracts.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -105,7 +107,7 @@
             this.dataGridViewContracts.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewContracts.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dataGridViewContracts.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewContracts.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridViewContracts.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewContracts.ThemeStyle.HeaderStyle.Height = 40;
             this.dataGridViewContracts.ThemeStyle.ReadOnly = false;
             this.dataGridViewContracts.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -131,8 +133,8 @@
             // ColumnAuthor
             // 
             this.ColumnAuthor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.ColumnAuthor.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.ColumnAuthor.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColumnAuthor.FillWeight = 503.7433F;
             this.ColumnAuthor.HeaderText = "Писатель";
             this.ColumnAuthor.MinimumWidth = 6;
@@ -144,8 +146,8 @@
             // ColumnConclusionDate
             // 
             this.ColumnConclusionDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.ColumnConclusionDate.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.ColumnConclusionDate.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColumnConclusionDate.FillWeight = 19.25134F;
             this.ColumnConclusionDate.HeaderText = "Дата заключения";
             this.ColumnConclusionDate.MinimumWidth = 6;
@@ -174,8 +176,8 @@
             // ColumnTerminationDate
             // 
             this.ColumnTerminationDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.ColumnTerminationDate.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.ColumnTerminationDate.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColumnTerminationDate.FillWeight = 19.25134F;
             this.ColumnTerminationDate.HeaderText = "Дата расторжения";
             this.ColumnTerminationDate.MinimumWidth = 6;
@@ -191,10 +193,10 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(928, 10);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAdd.Location = new System.Drawing.Point(1237, 12);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(170, 35);
+            this.buttonAdd.Size = new System.Drawing.Size(227, 43);
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.Text = "Добавить контракт";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -203,9 +205,10 @@
             // pictureBoxUpdate
             // 
             this.pictureBoxUpdate.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUpdate.Image")));
-            this.pictureBoxUpdate.Location = new System.Drawing.Point(811, 10);
+            this.pictureBoxUpdate.Location = new System.Drawing.Point(1081, 12);
+            this.pictureBoxUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxUpdate.Name = "pictureBoxUpdate";
-            this.pictureBoxUpdate.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxUpdate.Size = new System.Drawing.Size(43, 39);
             this.pictureBoxUpdate.TabIndex = 6;
             this.pictureBoxUpdate.TabStop = false;
             this.pictureBoxUpdate.Click += new System.EventHandler(this.pictureBoxUpdate_Click);
@@ -216,12 +219,12 @@
             this.dateTimePickerSearch.FillColor = System.Drawing.Color.MediumPurple;
             this.dateTimePickerSearch.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.dateTimePickerSearch.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimePickerSearch.Location = new System.Drawing.Point(856, 181);
-            this.dateTimePickerSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerSearch.Location = new System.Drawing.Point(1141, 223);
+            this.dateTimePickerSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerSearch.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerSearch.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerSearch.Name = "dateTimePickerSearch";
-            this.dateTimePickerSearch.Size = new System.Drawing.Size(242, 32);
+            this.dateTimePickerSearch.Size = new System.Drawing.Size(323, 39);
             this.dateTimePickerSearch.TabIndex = 25;
             this.dateTimePickerSearch.Value = new System.DateTime(2024, 5, 14, 0, 0, 0, 0);
             // 
@@ -230,11 +233,11 @@
             this.textBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearch.Font = new System.Drawing.Font("Nirmala UI", 18F);
-            this.textBoxSearch.Location = new System.Drawing.Point(856, 181);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxSearch.Location = new System.Drawing.Point(1141, 223);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSearch.MaxLength = 50;
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(242, 32);
+            this.textBoxSearch.Size = new System.Drawing.Size(323, 32);
             this.textBoxSearch.TabIndex = 24;
             // 
             // labelAttribute
@@ -242,8 +245,7 @@
             this.labelAttribute.AutoSize = true;
             this.labelAttribute.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAttribute.ForeColor = System.Drawing.Color.MediumPurple;
-            this.labelAttribute.Location = new System.Drawing.Point(852, 156);
-            this.labelAttribute.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelAttribute.Location = new System.Drawing.Point(1136, 192);
             this.labelAttribute.Name = "labelAttribute";
             this.labelAttribute.Size = new System.Drawing.Size(91, 23);
             this.labelAttribute.TabIndex = 22;
@@ -254,8 +256,7 @@
             this.labelSearch.AutoSize = true;
             this.labelSearch.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelSearch.ForeColor = System.Drawing.Color.MediumPurple;
-            this.labelSearch.Location = new System.Drawing.Point(852, 76);
-            this.labelSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSearch.Location = new System.Drawing.Point(1136, 94);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(68, 23);
             this.labelSearch.TabIndex = 23;
@@ -274,10 +275,10 @@
             "Срок",
             "Статус",
             "Дата расторжения"});
-            this.comboBoxSearch.Location = new System.Drawing.Point(856, 101);
-            this.comboBoxSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxSearch.Location = new System.Drawing.Point(1141, 124);
+            this.comboBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSearch.Name = "comboBoxSearch";
-            this.comboBoxSearch.Size = new System.Drawing.Size(242, 33);
+            this.comboBoxSearch.Size = new System.Drawing.Size(321, 33);
             this.comboBoxSearch.TabIndex = 21;
             this.comboBoxSearch.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearch_SelectedIndexChanged);
             // 
@@ -288,10 +289,10 @@
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearch.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.buttonSearch.ForeColor = System.Drawing.Color.White;
-            this.buttonSearch.Location = new System.Drawing.Point(928, 255);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSearch.Location = new System.Drawing.Point(1237, 314);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(170, 35);
+            this.buttonSearch.Size = new System.Drawing.Size(227, 43);
             this.buttonSearch.TabIndex = 20;
             this.buttonSearch.Text = "Поиск";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -299,9 +300,9 @@
             // 
             // ContractsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1107, 462);
+            this.ClientSize = new System.Drawing.Size(1476, 569);
             this.Controls.Add(this.dateTimePickerSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelAttribute);
@@ -313,7 +314,7 @@
             this.Controls.Add(this.dataGridViewContracts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ContractsForm";
             this.Text = "ContractsForm";
             this.Load += new System.EventHandler(this.ContractsForm_Load);

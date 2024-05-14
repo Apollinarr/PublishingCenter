@@ -69,6 +69,8 @@
             // 
             // dataGridViewCustomers
             // 
+            this.dataGridViewCustomers.AllowUserToResizeColumns = false;
+            this.dataGridViewCustomers.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dataGridViewCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
@@ -82,7 +84,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewCustomers.ColumnHeadersHeight = 40;
-            this.dataGridViewCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dataGridViewCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
             this.ColumnName,
@@ -103,6 +104,7 @@
             this.dataGridViewCustomers.Name = "dataGridViewCustomers";
             this.dataGridViewCustomers.RowHeadersVisible = false;
             this.dataGridViewCustomers.RowHeadersWidth = 51;
+            this.dataGridViewCustomers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewCustomers.RowTemplate.Height = 24;
             this.dataGridViewCustomers.Size = new System.Drawing.Size(1174, 518);
             this.dataGridViewCustomers.TabIndex = 5;
@@ -117,7 +119,7 @@
             this.dataGridViewCustomers.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewCustomers.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dataGridViewCustomers.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewCustomers.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridViewCustomers.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewCustomers.ThemeStyle.HeaderStyle.Height = 40;
             this.dataGridViewCustomers.ThemeStyle.ReadOnly = false;
             this.dataGridViewCustomers.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -184,7 +186,7 @@
             // 
             this.pictureBoxUpdate.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUpdate.Image")));
             this.pictureBoxUpdate.Location = new System.Drawing.Point(1193, 12);
-            this.pictureBoxUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxUpdate.Name = "pictureBoxUpdate";
             this.pictureBoxUpdate.Size = new System.Drawing.Size(43, 39);
             this.pictureBoxUpdate.TabIndex = 7;
@@ -200,7 +202,7 @@
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSearch.MaxLength = 50;
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(323, 40);
+            this.textBoxSearch.Size = new System.Drawing.Size(323, 32);
             this.textBoxSearch.TabIndex = 24;
             // 
             // labelAttribute
@@ -210,7 +212,7 @@
             this.labelAttribute.ForeColor = System.Drawing.Color.MediumPurple;
             this.labelAttribute.Location = new System.Drawing.Point(1245, 202);
             this.labelAttribute.Name = "labelAttribute";
-            this.labelAttribute.Size = new System.Drawing.Size(110, 27);
+            this.labelAttribute.Size = new System.Drawing.Size(91, 23);
             this.labelAttribute.TabIndex = 22;
             this.labelAttribute.Text = "Атрибут";
             // 
@@ -221,7 +223,7 @@
             this.labelSearch.ForeColor = System.Drawing.Color.MediumPurple;
             this.labelSearch.Location = new System.Drawing.Point(1245, 103);
             this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(84, 27);
+            this.labelSearch.Size = new System.Drawing.Size(68, 23);
             this.labelSearch.TabIndex = 23;
             this.labelSearch.Text = "Поиск";
             // 
@@ -240,7 +242,7 @@
             this.comboBoxSearch.Location = new System.Drawing.Point(1251, 134);
             this.comboBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSearch.Name = "comboBoxSearch";
-            this.comboBoxSearch.Size = new System.Drawing.Size(321, 40);
+            this.comboBoxSearch.Size = new System.Drawing.Size(321, 33);
             this.comboBoxSearch.TabIndex = 21;
             this.comboBoxSearch.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearch_SelectedIndexChanged);
             // 
@@ -275,7 +277,7 @@
             this.Controls.Add(this.dataGridViewCustomers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomersForm";
             this.Text = "CustomersForm";
             this.Load += new System.EventHandler(this.CustomersForm_Load);

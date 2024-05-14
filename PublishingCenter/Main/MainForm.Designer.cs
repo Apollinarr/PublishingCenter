@@ -254,6 +254,7 @@
             this.buttonReports.Size = new System.Drawing.Size(128, 48);
             this.buttonReports.TabIndex = 0;
             this.buttonReports.Text = "Отчеты";
+            this.buttonReports.Click += new System.EventHandler(this.buttonReports_Click);
             // 
             // buttonCustomers
             // 
