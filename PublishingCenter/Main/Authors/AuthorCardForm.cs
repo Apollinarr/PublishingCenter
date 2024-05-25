@@ -1,16 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Utilities.Collections;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
-using static ServiceStack.Script.Lisp;
 
 namespace PublishingCenter
 {
@@ -87,46 +78,6 @@ namespace PublishingCenter
             }
         }
 
-        //public AuthorCardForm(string id)
-        //{
-        //    InitializeComponent();
-        //    connection = new Connection().GetConnectionString();
-        //    connection.Open();
-
-        //    buttonAdd.Visible = false;
-        //        buttonAdd.Enabled = false;
-        //        buttonDelete.Visible = true;
-        //        buttonDelete.Enabled = true;
-        //        buttonChange.Visible = true;
-
-        //    try
-        //    {
-        //        string query = "SELECT * FROM Authors WHERE id = @Id LIMIT 1";
-        //        MySqlCommand command = new MySqlCommand(query, connection);
-        //        command.Parameters.AddWithValue("@Id", id);
-
-        //        using (MySqlDataReader reader = command.ExecuteReader())
-        //        {
-        //            if (reader.Read())
-        //            {
-        //                textBoxFirstName.Text = reader.GetString("first_name");
-        //                textBoxLastName.Text = reader.GetString("last_name");
-        //                textBoxMiddleName.Text = reader.GetString("middle_name");
-        //                dateTimePickerBirth.Value = reader.GetDateTime("date_of_birth");
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    finally
-        //    {
-        //        if (connection.State == ConnectionState.Open)
-        //            connection.Close();
-        //    }
-        //}
-
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Close();
@@ -157,14 +108,6 @@ namespace PublishingCenter
             }
             return true;
         }
-
-        //private void CleareFields()
-        //{
-        //    textBoxFirstName.Clear();
-        //    textBoxLastName.Clear();
-        //    textBoxMiddleName.Clear();
-        //    dateTimePickerBirth.Value = DateTime.Now;
-        //}
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {

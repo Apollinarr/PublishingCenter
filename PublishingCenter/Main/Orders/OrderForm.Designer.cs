@@ -110,7 +110,7 @@
             this.dataGridViewOrders.RowHeadersWidth = 51;
             this.dataGridViewOrders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewOrders.RowTemplate.Height = 24;
-            this.dataGridViewOrders.Size = new System.Drawing.Size(1089, 518);
+            this.dataGridViewOrders.Size = new System.Drawing.Size(1089, 653);
             this.dataGridViewOrders.TabIndex = 6;
             this.dataGridViewOrders.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridViewOrders.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -208,7 +208,7 @@
             // 
             this.pictureBoxUpdate.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUpdate.Image")));
             this.pictureBoxUpdate.Location = new System.Drawing.Point(1108, 12);
-            this.pictureBoxUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxUpdate.Name = "pictureBoxUpdate";
             this.pictureBoxUpdate.Size = new System.Drawing.Size(43, 39);
             this.pictureBoxUpdate.TabIndex = 8;
@@ -239,7 +239,7 @@
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSearch.MaxLength = 50;
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(323, 32);
+            this.textBoxSearch.Size = new System.Drawing.Size(323, 40);
             this.textBoxSearch.TabIndex = 24;
             // 
             // labelAttribute
@@ -249,7 +249,7 @@
             this.labelAttribute.ForeColor = System.Drawing.Color.MediumPurple;
             this.labelAttribute.Location = new System.Drawing.Point(1136, 208);
             this.labelAttribute.Name = "labelAttribute";
-            this.labelAttribute.Size = new System.Drawing.Size(91, 23);
+            this.labelAttribute.Size = new System.Drawing.Size(110, 27);
             this.labelAttribute.TabIndex = 22;
             this.labelAttribute.Text = "Атрибут";
             // 
@@ -260,7 +260,7 @@
             this.labelSearch.ForeColor = System.Drawing.Color.MediumPurple;
             this.labelSearch.Location = new System.Drawing.Point(1136, 110);
             this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(68, 23);
+            this.labelSearch.Size = new System.Drawing.Size(84, 27);
             this.labelSearch.TabIndex = 23;
             this.labelSearch.Text = "Поиск";
             // 
@@ -279,7 +279,7 @@
             this.comboBoxSearch.Location = new System.Drawing.Point(1141, 140);
             this.comboBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSearch.Name = "comboBoxSearch";
-            this.comboBoxSearch.Size = new System.Drawing.Size(321, 33);
+            this.comboBoxSearch.Size = new System.Drawing.Size(321, 40);
             this.comboBoxSearch.TabIndex = 21;
             this.comboBoxSearch.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearch_SelectedIndexChanged);
             // 
@@ -303,7 +303,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1476, 569);
+            this.ClientSize = new System.Drawing.Size(1476, 691);
             this.Controls.Add(this.dateTimePickerSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelAttribute);
@@ -315,7 +315,7 @@
             this.Controls.Add(this.dataGridViewOrders);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "OrderForm";
             this.Text = "1107; 462";
             this.Load += new System.EventHandler(this.OrderForm_Load);

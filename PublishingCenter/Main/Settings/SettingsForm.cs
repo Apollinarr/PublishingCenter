@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PublishingCenter.Main.Settings
@@ -19,7 +13,6 @@ namespace PublishingCenter.Main.Settings
             InitializeComponent();
             connection = new Connection().GetConnectionString();
 
-            //dataGridViewUsers.Width = Width;
             buttonAdd.Location = new System.Drawing.Point(dataGridViewUsers.Width + 130, dataGridViewUsers.Location.Y);
             pictureBoxUpdate.Location = new System.Drawing.Point(dataGridViewUsers.Width + 15, dataGridViewUsers.Location.Y);
             labelSearch.Location = new System.Drawing.Point(dataGridViewUsers.Width + 70, dataGridViewUsers.Location.Y + 90);

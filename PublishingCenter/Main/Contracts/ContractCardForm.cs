@@ -1,17 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Asn1.X509;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Contracts;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static ServiceStack.Script.Lisp;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PublishingCenter.Main.Contracts
 {
@@ -50,7 +40,6 @@ namespace PublishingCenter.Main.Contracts
                 if (comboBoxAuthor.Items.Count == 0)
                 {
                     MessageBox.Show("Нет авторов, у которых не заключен контракт. Добавьте автора.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //Close();
                 }
             }
             else
@@ -74,10 +63,6 @@ namespace PublishingCenter.Main.Contracts
                     comboBoxContractPeriod.Enabled = false;
                     dateTimePickerTerminationDate.Enabled = false;
                 }
-                
-
-
-                //SearchAuthorsWithoutContracts();
 
                 try
                 {
@@ -221,11 +206,7 @@ namespace PublishingCenter.Main.Contracts
                 MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
-            //finally
-            //{
-            //    if (connection.State == ConnectionState.Open)
-            //        connection.Close();
-            //}
+
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -323,9 +304,6 @@ namespace PublishingCenter.Main.Contracts
                     textBoxUpdate.Focus();
                     return;
                 }
-
-                //comboBoxContractPeriod.Items.Add(textBoxUpdate.Text);
-                //comboBoxContractPeriod.SelectedItem = textBoxUpdate.Text;
 
                 try
                 {

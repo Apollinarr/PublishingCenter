@@ -1,21 +1,10 @@
-﻿using Guna.UI2.WinForms.Suite;
-using iTextSharp.text;
+﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
 
 namespace PublishingCenter.Main.reports
 {
@@ -109,10 +98,8 @@ namespace PublishingCenter.Main.reports
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 adapter.Fill(reportData);
 
-                // Создание PDF
                 string pdfFilePath = CreatePDF(reportData, reportName);
 
-                // Отправка по почте
                 Mailer.SendMessage(Employee.Login, "Отчёт: " + reportName, "Во вложении отчёт.", pdfFilePath);
                 MessageBox.Show($"На почту: {Employee.Login} направлен отчёт.", "Отчёт", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -136,22 +123,18 @@ namespace PublishingCenter.Main.reports
                 PdfWriter writer = PdfWriter.GetInstance(doc, fs);
                 doc.Open();
 
-                // Используем шрифт Arial
                 string fontPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "arial.ttf");
                 BaseFont baseFont = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 12);
 
-                // Add title
                 Paragraph title = new Paragraph(reportName, new iTextSharp.text.Font(baseFont, 16));
                 title.Alignment = Element.ALIGN_CENTER;
                 doc.Add(title);
                 doc.Add(new Paragraph("\n"));
 
-                // Add table
                 PdfPTable table = new PdfPTable(data.Columns.Count);
                 table.WidthPercentage = 100;
 
-                // Add table header
                 foreach (DataColumn column in data.Columns)
                 {
                     PdfPCell cell = new PdfPCell(new Phrase(column.ColumnName, new iTextSharp.text.Font(baseFont, 12)));
@@ -159,7 +142,6 @@ namespace PublishingCenter.Main.reports
                     table.AddCell(cell);
                 }
 
-                // Add table rows
                 foreach (DataRow row in data.Rows)
                 {
                     foreach (var item in row.ItemArray)
@@ -174,42 +156,6 @@ namespace PublishingCenter.Main.reports
             }
 
             return pdfFilePath;
-
-            //iTextSharp.text.Document document = new iTextSharp.text.Document();
-            //PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(pdfFilePath, FileMode.Create));
-            //document.Open();
-
-            //// Добавление заголовка
-            //document.Add(new Paragraph(reportName, FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 18)));
-            //document.Add(new Paragraph("\n"));
-
-            //// Создание таблицы
-            //PdfPTable table = new PdfPTable(data.Columns.Count);
-            //table.WidthPercentage = 100;
-
-            //// Добавление заголовков столбцов
-            //foreach (DataColumn column in data.Columns)
-            //{
-            //    PdfPCell cell = new PdfPCell(new Phrase(column.ColumnName, FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12)));
-            //    cell.HorizontalAlignment = Element.ALIGN_CENTER;
-            //    table.AddCell(cell);
-            //}
-
-            //// Добавление данных
-            //foreach (DataRow row in data.Rows)
-            //{
-            //    foreach (var cellValue in row.ItemArray)
-            //    {
-            //        PdfPCell cell = new PdfPCell(new Phrase(cellValue.ToString(), FontFactory.GetFont(FontFactory.HELVETICA, 10)));
-            //        cell.HorizontalAlignment = Element.ALIGN_CENTER;
-            //        table.AddCell(cell);
-            //    }
-            //}
-
-            //document.Add(table);
-            //document.Close();
-
-            //return pdfFilePath;
         }
     }
 }

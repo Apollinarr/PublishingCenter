@@ -1,14 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using PublishingCenter.Main.Authors;
-using ServiceStack;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PublishingCenter
@@ -59,10 +52,6 @@ namespace PublishingCenter
                     dataGridViewAuthors.Rows.Add(row.ItemArray[0], row.ItemArray[2], row.ItemArray[1], row.ItemArray[3], ((DateTime)row.ItemArray[4]).ToShortDateString(), "Смотреть");
                 }
 
-
-                //    System.Data.DataSet dataSet = new System.Data.DataSet();
-                //    adapter.Fill(dataSet, "Authors");
-                //    dataGridViewAuthors.DataSource = dataSet.Tables["Authors"];
             }
             catch (Exception ex)
             {
@@ -90,11 +79,7 @@ namespace PublishingCenter
             {
                 try
                 {
-                    //connection.Open();
                     string id = dataGridViewAuthors.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    //string query = "SELECT * FROM Authors WHERE id = @Id LIMIT 1";
-                    //MySqlCommand command = new MySqlCommand(query, connection);
-                    //command.Parameters.AddWithValue("@AuthorId", id);
                     AuthorCardForm authorCardForm = new AuthorCardForm(false, false, id);
                     authorCardForm.ShowDialog();
 

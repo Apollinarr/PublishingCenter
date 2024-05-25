@@ -106,7 +106,7 @@
             this.dataGridViewCustomers.RowHeadersWidth = 51;
             this.dataGridViewCustomers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewCustomers.RowTemplate.Height = 24;
-            this.dataGridViewCustomers.Size = new System.Drawing.Size(1174, 518);
+            this.dataGridViewCustomers.Size = new System.Drawing.Size(1174, 657);
             this.dataGridViewCustomers.TabIndex = 5;
             this.dataGridViewCustomers.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridViewCustomers.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -202,7 +202,7 @@
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSearch.MaxLength = 50;
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(323, 32);
+            this.textBoxSearch.Size = new System.Drawing.Size(323, 40);
             this.textBoxSearch.TabIndex = 24;
             // 
             // labelAttribute
@@ -212,7 +212,7 @@
             this.labelAttribute.ForeColor = System.Drawing.Color.MediumPurple;
             this.labelAttribute.Location = new System.Drawing.Point(1245, 202);
             this.labelAttribute.Name = "labelAttribute";
-            this.labelAttribute.Size = new System.Drawing.Size(91, 23);
+            this.labelAttribute.Size = new System.Drawing.Size(110, 27);
             this.labelAttribute.TabIndex = 22;
             this.labelAttribute.Text = "Атрибут";
             // 
@@ -223,7 +223,7 @@
             this.labelSearch.ForeColor = System.Drawing.Color.MediumPurple;
             this.labelSearch.Location = new System.Drawing.Point(1245, 103);
             this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(68, 23);
+            this.labelSearch.Size = new System.Drawing.Size(84, 27);
             this.labelSearch.TabIndex = 23;
             this.labelSearch.Text = "Поиск";
             // 
@@ -242,7 +242,7 @@
             this.comboBoxSearch.Location = new System.Drawing.Point(1251, 134);
             this.comboBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSearch.Name = "comboBoxSearch";
-            this.comboBoxSearch.Size = new System.Drawing.Size(321, 33);
+            this.comboBoxSearch.Size = new System.Drawing.Size(321, 40);
             this.comboBoxSearch.TabIndex = 21;
             this.comboBoxSearch.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearch_SelectedIndexChanged);
             // 
@@ -266,7 +266,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 569);
+            this.ClientSize = new System.Drawing.Size(1600, 688);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelAttribute);
             this.Controls.Add(this.labelSearch);
