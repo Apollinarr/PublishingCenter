@@ -1,14 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Asn1.X509.SigI;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PublishingCenter
@@ -50,12 +43,9 @@ namespace PublishingCenter
                         var account = new Employee();
                         if (account.SetUserData(login))
                         {
-                            //MessageBox.Show("Пользователь авторизирован.", "Авторизация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Hide();
                             new MainForm().ShowDialog();
 
-                            //StartForm startForm = (StartForm)Application.OpenForms["StartForm"];
-                            //startForm.Acti
                         }
                     }
                     else

@@ -118,7 +118,7 @@
             this.dataGridViewBooks.RowHeadersWidth = 51;
             this.dataGridViewBooks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewBooks.RowTemplate.Height = 24;
-            this.dataGridViewBooks.Size = new System.Drawing.Size(1089, 518);
+            this.dataGridViewBooks.Size = new System.Drawing.Size(1089, 667);
             this.dataGridViewBooks.TabIndex = 6;
             this.dataGridViewBooks.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridViewBooks.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -213,6 +213,7 @@
             // 
             this.ColumnSellingPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnSellingPrice.HeaderText = "Цена продажи";
+            this.ColumnSellingPrice.MinimumWidth = 6;
             this.ColumnSellingPrice.Name = "ColumnSellingPrice";
             this.ColumnSellingPrice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.ColumnSellingPrice.Width = 200;
@@ -221,6 +222,7 @@
             // 
             this.ColumnRoyalty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnRoyalty.HeaderText = "Гонорар атора";
+            this.ColumnRoyalty.MinimumWidth = 6;
             this.ColumnRoyalty.Name = "ColumnRoyalty";
             this.ColumnRoyalty.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.ColumnRoyalty.Width = 200;
@@ -229,6 +231,7 @@
             // 
             this.ColumnAuthor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnAuthor.HeaderText = "Автор";
+            this.ColumnAuthor.MinimumWidth = 6;
             this.ColumnAuthor.Name = "ColumnAuthor";
             this.ColumnAuthor.Width = 200;
             // 
@@ -236,6 +239,7 @@
             // 
             this.ColumnGenre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnGenre.HeaderText = "Жанр";
+            this.ColumnGenre.MinimumWidth = 6;
             this.ColumnGenre.Name = "ColumnGenre";
             this.ColumnGenre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.ColumnGenre.Width = 200;
@@ -244,7 +248,7 @@
             // 
             this.pictureBoxUpdate.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUpdate.Image")));
             this.pictureBoxUpdate.Location = new System.Drawing.Point(1108, 12);
-            this.pictureBoxUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxUpdate.Name = "pictureBoxUpdate";
             this.pictureBoxUpdate.Size = new System.Drawing.Size(43, 39);
             this.pictureBoxUpdate.TabIndex = 8;
@@ -275,7 +279,7 @@
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSearch.MaxLength = 50;
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(323, 32);
+            this.textBoxSearch.Size = new System.Drawing.Size(323, 40);
             this.textBoxSearch.TabIndex = 24;
             // 
             // labelAttribute
@@ -285,7 +289,7 @@
             this.labelAttribute.ForeColor = System.Drawing.Color.MediumPurple;
             this.labelAttribute.Location = new System.Drawing.Point(1100, 201);
             this.labelAttribute.Name = "labelAttribute";
-            this.labelAttribute.Size = new System.Drawing.Size(91, 23);
+            this.labelAttribute.Size = new System.Drawing.Size(110, 27);
             this.labelAttribute.TabIndex = 22;
             this.labelAttribute.Text = "Атрибут";
             // 
@@ -296,7 +300,7 @@
             this.labelSearch.ForeColor = System.Drawing.Color.MediumPurple;
             this.labelSearch.Location = new System.Drawing.Point(1100, 102);
             this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(68, 23);
+            this.labelSearch.Size = new System.Drawing.Size(84, 27);
             this.labelSearch.TabIndex = 23;
             this.labelSearch.Text = "Поиск";
             // 
@@ -316,7 +320,7 @@
             this.comboBoxSearch.Location = new System.Drawing.Point(1105, 133);
             this.comboBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSearch.Name = "comboBoxSearch";
-            this.comboBoxSearch.Size = new System.Drawing.Size(321, 33);
+            this.comboBoxSearch.Size = new System.Drawing.Size(321, 40);
             this.comboBoxSearch.TabIndex = 21;
             this.comboBoxSearch.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearch_SelectedIndexChanged);
             // 
@@ -340,7 +344,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 569);
+            this.ClientSize = new System.Drawing.Size(1443, 690);
             this.Controls.Add(this.dateTimePickerSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelAttribute);

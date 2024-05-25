@@ -19,8 +19,8 @@ namespace PublishingCenter
         {
             server = "localhost";
             database = "publishingcenter";
-            uid = "user";
-            password = "user";
+            uid = "pubUser";
+            password = "pubUser";
         }
 
         public MySqlConnection GetConnectionString()

@@ -5,13 +5,7 @@ using PublishingCenter.Main.Orders;
 using PublishingCenter.Main.reports;
 using PublishingCenter.Main.Settings;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PublishingCenter
@@ -29,14 +23,6 @@ namespace PublishingCenter
             panelContainer.Height = MaximizedBounds.Height - panelHeader.Height - panelSections.Height;
             flowLayoutPanelUser.Location = new Point(Width - flowLayoutPanelUser.Width - 10, 0);
             buttonUser.Text = Employee.FirstName + " " + Employee.LastName;
-            //if (Employee.Position != 4)
-            //{
-            //    buttonUser.Text = Employee.FirstName + " " + Employee.LastName;
-            //}
-            //else
-            //{
-            //    buttonUser.Text = "Гость";
-            //}
 
             if (Employee.Position == 2)
             {
@@ -95,9 +81,6 @@ namespace PublishingCenter
             Close();
             StartForm startForm = (StartForm)Application.OpenForms["StartForm"];
             startForm.ShowLoginForm();
-            //ActiveForm.Show();
-            //StartForm startForm = new StartForm();
-            //startForm.Show();
         }
 
         private void buttonAuthors_Click(object sender, EventArgs e)
